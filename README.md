@@ -9,10 +9,14 @@ Briefly introduce yourself and your research focus.
 Express gratitude for the opportunity to discuss the emerging AI tools and their impact on academic research.
 Emphasize the importance of understanding both the benefits and risks associated with their usage.
 
+---
+
 ## I. Overview of AI Tools in Academic Research (2 minutes)
 
 Mention the emergence of advanced AI tools like ChatGPT, Bing Chat, DeepL, etc.
 Highlight their potential to enhance various aspects of academic research, including learning, proposal writing, coding, and more.
+
+---
 
 ## II. Benefits of AI in Academic Research (6 minutes)
 ### A. Learning and Understanding New Concepts (2 minutes)
@@ -30,6 +34,8 @@ Discuss the potential for increased efficiency and improved proposal quality thr
 Highlight the role of AI tools in automating repetitive coding tasks, optimizing algorithms, and improving data analysis processes.
 Discuss the potential for faster experimentation, more reliable results, and increased reproducibility.
 
+---
+
 ## III. Risks and Considerations (5 minutes)
 ### A. Trustworthiness of Results (2 minutes)
 
@@ -46,13 +52,15 @@ Advocate for responsible usage of AI tools, including transparency, accountabili
 Highlight the importance of maintaining the central role of human expertise in scientific research.
 Discuss how AI tools should be viewed as complementary aids rather than replacements for human intelligence.
 
+---
+
 ## Conclusion:
 
 Recap the benefits of AI tools in academic research, including learning, proposal writing, coding, and data analysis.
 Stress the importance of being aware of the risks associated with AI usage and the need for critical evaluation of AI-generated results.
 Encourage open discussions, collaboration, and continuous learning to harness the potential of AI tools effectively.
 
-
+---
 
 
 # Use examples:
