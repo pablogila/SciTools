@@ -1,7 +1,13 @@
+# AI Tools for Academic Research
+
+This guide is only a quick overview of the recent advancements of AI tools for academic use, for scientists living under a rock.
+
 # Overview
 
 
 ![](pictures/test.PNG)
+
+
 
 ## Introduction:
 
@@ -9,7 +15,6 @@ Briefly introduce yourself and your research focus.
 Express gratitude for the opportunity to discuss the emerging AI tools and their impact on academic research.
 Emphasize the importance of understanding both the benefits and risks associated with their usage.
 
----
 
 ## I. Overview of AI Tools in Academic Research (2 minutes)
 
