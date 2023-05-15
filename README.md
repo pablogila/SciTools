@@ -33,7 +33,7 @@ Too many AI tools have spawned in the last months, but only a few seem useful fo
 
 * **Lower quality** of _everything_ in the long term.  
 
-**AI tools should be viewed as a complementary tool rather than a replacements for your intelligence.**  
+**AI tools should be considered as a complementary tool rather than a replacement for your intelligence.**  
 
 ---
 
