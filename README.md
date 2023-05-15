@@ -73,10 +73,10 @@ The most interesting use cases for scientific research are:
 
 ## Main LLMs tools  
 * [Bing Chat](https://www.bing.com/chat). The best general tool available to date. It does give you real references, and is really useful to search for any kind of info. It uses a more powerful model (GPT-4) than the free version of ChatGPT (GPT-3.5). Only works on _Microsoft Edge_, but you can install a plugin called _Bing Chat for All Browsers_ to use it on [Chrome](https://chrome.google.com/webstore/detail/bing-chat-for-all-browser/jofbglonpbndadajbafmmaklbfbkggpo) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/bing-chat-for-all-browsers/).  
-* [ChatGPT](https://chat.openai.com/). The famous one. It is useful, for coding and text correction in particular, but it is NOT connected to the internet _yet_, so do NOT trust references from him, he might lying.  
+* [ChatGPT](https://chat.openai.com/). The famous one. It is useful, for coding and text correction in particular, but it is NOT connected to the internet _yet_, so do NOT trust references from him, he might be lying.  
 * [Github Copilot](https://github.com/features/copilot). A VSCode plugin that helps you write code, the best code completion tool currently available, free with the university account.  
 * [HuggingChat](https://huggingface.co/chat/). New open source LLMs will probably appear here. Still under development, but expect major improvements in the coming months.  
-* [Google Bard](https://bard.google.com/). Not yet available in Europe, but kind of like _Bing Chat_. More stuff [soon](g.co/Labs)  
+* [Google Bard](https://bard.google.com/). Not yet available in Europe, but kind of like _Bing Chat_. More stuff [soon](https://g.co/Labs)  
 
 ## Finding related literature
 * [Inciteful](https://inciteful.xyz/). Paste a DOI and find related papers, using cross citations.  
