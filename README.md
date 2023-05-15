@@ -2,7 +2,7 @@
 
 **Last update: 2023/05/15**  
 
-This is a quick overview about the benefits, the risks and the how-to-s of AI tools for scientific research, and in particular for _Large Language Models_ (LLMs). It is intended for scientists who have been living under a rock (or in the lab) for the last months, and who want to learn the basics about AI stuff.  
+This is a quick overview about the benefits, the risks and the how-to-s of AI tools for scientific research, and in particular for _Large Language Models_ (LLMs). It is intended for scientists who have been living under a rock (or in the lab) for the last months, and want to learn the basics about AI stuff. It also contains some tools that might not be powered by LLMs, yet are useful for scientific research.  
 
 ---
 
@@ -28,35 +28,39 @@ Please be cautious with AI-generated results. LLMs will always answer, yet somet
 
 The most interesting use cases for scientific research are:  
 
-* **Learning** and understanding new concepts.  
-* Accelerating **writing** and literature **review**.  
-* Writing better computer **code**.  
+* **Learning** and **summarizing** complex concepts. You can simply ask for a topic, but also to explain several paragraphs in simpler terms.  
+* Help with **literature review**, finding new related papers and summarizing key points.  
+* Speed up the **writing** of proposals and papers by suggesting a **structure** or even paragraph **drafts**.  
+* Write **computer code** faster and more efficiently, fix bugs, ask for specific features, write documentation...  
 
 ---
 
 # Summary of The Cool Tools 😎  
 
 ## Main ways to access LLMs  
-* [ChatGPT](https://chat.openai.com/). It is useful, but it is NOT connected to the internet, so do NOT trust references from him, he is lying.  
-* [Bing Chat](https://www.bing.com/chat). It DOES give you references, it is REALLY USEFUL to search for any kind of info. It uses a more powerful model than the free version of ChatGPT.
-Only works on _Microsoft Edge_, but you can install a plugin called _Bing Chat for All Browsers_ to use it on [Chrome](https://chrome.google.com/webstore/detail/bing-chat-for-all-browser/jofbglonpbndadajbafmmaklbfbkggpo) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/bing-chat-for-all-browsers/).  
-* [Github Copilot](https://github.com/features/copilot). A VSCode plugin that helps you write code, the best code completion tool currently available, free with the university account.
-* [HuggingChat](https://huggingface.co/chat/). The open source LLMs will probably appear here, those are still on production but expect major improvements in the coming months.  
-* [Google Bard](https://bard.google.com/). Not yet available in Europe, but kind of like _Bing Chat_.
+* [Bing Chat](https://www.bing.com/chat). The best general tool available to date. It does give you real references, and is really useful to search for any kind of info. It uses a more powerful model (GPT-4) than the free version of ChatGPT (GPT-3.5). Only works on _Microsoft Edge_, but you can install a plugin called _Bing Chat for All Browsers_ to use it on [Chrome](https://chrome.google.com/webstore/detail/bing-chat-for-all-browser/jofbglonpbndadajbafmmaklbfbkggpo) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/bing-chat-for-all-browsers/).  
+* [ChatGPT](https://chat.openai.com/). The famous one. It is useful, for coding and text correction in particular, but it is NOT connected to the internet _yet_, so do NOT trust references from him, he might lying.  
+* [Github Copilot](https://github.com/features/copilot). A VSCode plugin that helps you write code, the best code completion tool currently available, free with the university account.  
+* [HuggingChat](https://huggingface.co/chat/). New open source LLMs will probably appear here. Still under development, but expect major improvements in the coming months.  
+* [Google Bard](https://bard.google.com/). Not yet available in Europe, but kind of like _Bing Chat_.  
 
-## To find papers and references
-Upload a DOI and get many papers related to it:
-* [Inciteful](https://inciteful.xyz/), using cross citations.  
-* [Connected Papers](https://www.connectedpapers.com/), using AI to find related papers.  
+## Finding related literature
+* [Inciteful](https://inciteful.xyz/). Paste a DOI and find related papers, using cross citations.  
+* [Connected Papers](https://www.connectedpapers.com/). Paste a DOI and find related papers, not by cross citations but using AI to find similarities.  
+* [Research Rabbit](https://researchrabbitapp.com/). Upload a BibTeX or connect to your Zotero account, and find papers related to your collection.  
 
-## To help you write
+## Literature review
+* [Elicit](https://elicit.org/). Ask a Question, get summarized results from papers.
+* [Consensus](https://consensus.app/search/). Ask a yes or no question, and will try to answer according to the scientific literature.  
+
+## Useful tools for other specific tasks
 * [Pix2Tex](https://p2t.behye.com/). Write $\LaTeX$ equations by uploading a screenshot.     
 * [Deepl Write](https://www.deepl.com/write). Check your grammar or translate, really useful even for scientific texts.  
 * [Google Reverse Image Search](https://images.google.com/). It is not new at all, but it is really useful to find the source of that graph that you don't know where it came from.  
 
 ## Other AI tools that may be useful
-* [Ora.AI]([ora.ai](https://ora.ai)). You can tune the chat to answer very specific questions.  
-* [Consensus](https://consensus.app/search/). Ask a yes or no question, and will try to answer according to the scientific literature.  
+These tools might be useful, but could be easily replaced by more general LLM tools with a bit of prompting.  
+* [Ora.AI](https://ora.ai). You can tune the chat to answer very specific questions.  
 * [Explain Paper](https://www.explainpaper.com/). Upload a paper and mark sections of text that you do not understand, it will try to explain them in a simpler way.  
 
 ---
