@@ -86,15 +86,11 @@ The most interesting use cases for scientific research are:
 * [Elicit](https://elicit.org/). Ask a Question, get summarized results from papers.
 * [Consensus](https://consensus.app/search/). Ask a yes or no question, and will try to answer according to the scientific literature.  
 
-## Useful tools for other tasks
-* [Pix2Tex](https://p2t.behye.com/). Write $\LaTeX$ equations by uploading a screenshot.     
+## Other useful tools
+* [Pix2Tex](https://p2t.behye.com/). Write $\LaTeX$ equations by uploading a screenshot.  
 * [Deepl Write](https://www.deepl.com/write). Check your grammar or translate, really useful even for scientific texts.  
 * [Google Reverse Image Search](https://images.google.com/). It is not new at all, but it is really useful to find the source of that graph that you don't know where it came from.  
-
-## Miscellaneous LLM tools
-These tools can be easily replicated by more general LLMs with a bit of prompting, but may be useful if you want to skip that part.  
-* [Explain Paper](https://www.explainpaper.com/). Upload a paper and mark sections of text that you do not understand, it will try to explain them in a simpler way.  
-* [Ora.AI](https://ora.ai). You can tune the model to answer very specific questions.  
+* [FreeFileSync](https://freefilesync.org/). Sync backups of entire folders with the click of a button.  
 
 ---
 
