@@ -1,8 +1,4 @@
-# New Tools for Scientific Research
-
-## Benefits and Risks of AI Tools for Academics
-
----
+# New Tools for Scientific Research: <br> Benefits and Challenges of AI Tools for Academics
 
 **Last update: 2023/05/15**  
 
@@ -31,7 +27,9 @@ Too many AI tools have spawned in the last months, but only a few seem useful fo
 
 * **Lack of moral and ethical decisions**.  
 
-* **Lower quality** of _everything_ in the long term.  
+* **Lower quality content** in the medium term.  
+
+* ... And major ethical, social, and economic issues in the medium and long term that will not be discussed here.  
 
 **AI tools should be considered as a complementary tool rather than a replacement for your intelligence.**  
 
@@ -61,7 +59,7 @@ The most interesting use cases for scientific research are:
 
 * **Be Specific**. These tools rely on the given context to generate the next word. It can not read your mind. You need to be very specific with your questions, and give it as much context as possible.  
 
-* **Train the inputs**. It will rarely give you what you want at first. It particularly excells if you ask it to review its previous output, checking for any possible mistakes, and then ask it to continue from there. It will often give you a more coherent response.  
+* **Train the inputs**. It will rarely give you what you want at first. It particularly excells if you ask for a small task, then review its previous output checking for any possible mistakes, and continue adding more complexity steps from there. This way it will produce a more coherent response.  
 
 * **Create a prompt library**. Save the prompts that work best for you, so that you can reuse them later in the future.  
 
@@ -76,7 +74,8 @@ The most interesting use cases for scientific research are:
 * [ChatGPT](https://chat.openai.com/). The famous one. It is useful, for coding and text correction in particular, but it is NOT connected to the internet _yet_, so do NOT trust references from him, he might be lying.  
 * [Github Copilot](https://github.com/features/copilot). A VSCode plugin that helps you write code, the best code completion tool currently available, free with the university account.  
 * [HuggingChat](https://huggingface.co/chat/). New open source LLMs will probably appear here. Still under development, but expect major improvements in the coming months.  
-* [Google Bard](https://bard.google.com/). Not yet available in Europe, but kind of like _Bing Chat_. More stuff [soon](https://g.co/Labs)  
+* [Google Bard](https://bard.google.com/). Not yet available in Europe, but kind of like _Bing Chat_. More stuff [soon](https://g.co/Labs).  
+* **GPT Agents**. Still on their infancy, these tools are given an objective, and pursue it by running recursively on their own (a.k.a. this is what will steal people's jobs).  
 
 ## Finding related literature
 * [Inciteful](https://inciteful.xyz/). Paste a DOI and find related papers, using cross citations.  
