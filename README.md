@@ -18,19 +18,12 @@ Too many AI tools have spawned in the last months, but only a few seem useful fo
 
 **AI tools are not magic:**  
 * **Can't do math**.  
-
 * **Will always answer**... But will not always know the _correct_ answer.
-
 * **Limited memory** - this will change in a few months though.  
-
 * **Biased training data**.  
-
 * **Lack of moral and ethical decisions**.  
-
 * **Lower quality content** in the medium term.  
-
 * ... And major ethical, social, and economic issues in the medium and long term that will not be discussed here.  
-
 **AI tools should be considered as a complementary tool rather than a replacement for your intelligence.**  
 
 ---
@@ -40,17 +33,11 @@ Too many AI tools have spawned in the last months, but only a few seem useful fo
 The most interesting use cases for scientific research are:  
 
 * **Learning** and **summarizing** complex concepts. You can simply ask for a topic, but also to explain several paragraphs in simpler terms.  
-
 * Help with **literature review**, finding new related papers and summarizing key points.  
-
 * Overcome the **Blank Page Syndrome**.  
-
 * **Translate** and **correct** texts.  
-
 * Seek **inspiration**.
-
 * Speed up the **writing** of proposals and papers by suggesting a **structure** or even paragraph **drafts**.  
-
 * Write **computer code** faster and more efficiently, fix bugs, ask for specific features, write documentation...  
 
 ---
@@ -58,11 +45,8 @@ The most interesting use cases for scientific research are:
 ## How to use LLMs, for Scientists Living Under a Rock 📚
 
 * **Be Specific**. These tools rely on the given context to generate the next word. It can not read your mind. You need to be very specific with your questions, and give it as much context as possible.  
-
 * **Train the inputs**. It will rarely give you what you want at first. It particularly excells if you ask for a small task, then review its previous output checking for any possible mistakes, and continue adding more complexity steps from there. This way it will produce a more coherent response.  
-
 * **Create a prompt library**. Save the prompts that work best for you, so that you can reuse them later in the future.  
-
 * And again, **be critical**. AI should not replace your intelligence.  
 
 ---
