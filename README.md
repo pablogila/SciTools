@@ -7,11 +7,11 @@ This is a quick overview of the benefits, risks, and how-to's of AI tools for sc
 ---
 
 ## Table of Contents 📖
-* [Risks of LLMs](#the-rest-of-the-problems-❌)
-* [What can we use LLMs for?](#what-can-we-use-llms-for-✅)
-* [How to use LLMs](#how-to-use-llms-for-scientists-living-under-a-rock-📚)
-* [Summary of The Cool Tools](#summary-of-the-cool-tools-😎)
-* [Prompt examples](#prompt-examples-✍)
+* [Risks of LLMs](#the-rest-of-the-problems-)
+* [What can we use LLMs for?](#what-can-we-use-llms-for-)
+* [How to use LLMs](#how-to-use-llms-for-scientists-living-under-a-rock-)
+* [Summary of The Cool Tools](#summary-of-the-cool-tools-)
+* [Prompt examples](#prompt-examples-)
 
 ---
 
