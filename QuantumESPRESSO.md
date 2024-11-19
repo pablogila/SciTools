@@ -25,7 +25,7 @@ NOTE: The following floating-point exceptions are signalling: IEEE_UNDERFLOW_FLA
 
 isotopes in the [ATOMIC_SPECIES](https://www.quantum-espresso.org/Doc/INPUT_PW.html#ATOMIC_SPECIES) must start by the actual letter from the species, such as H2; It can not be D.
 
-To export to a .CIF file after the calculation, we can use [[ASE#Exporting outputs|ASE]]. The graphical option would be to open the output on XCrySDen and save it as `.xsf`, then open it on [VESTA](https://jp-minerals.org/vesta/en/) and save it as `.cif`. This last option seems to preserve a bit better the numerical precision, since both [ASE](ASE.md) and [VESTA](https://jp-minerals.org/vesta/en/) cut some decimals for some weird reason.
+To export to a .CIF file after the calculation, we can use [ASE](ASE.md). The graphical option would be to open the output on XCrySDen and save it as `.xsf`, then open it on [VESTA](https://jp-minerals.org/vesta/en/) and save it as `.cif`. This last option seems to preserve a bit better the numerical precision, since both [ASE](ASE.md) and [VESTA](https://jp-minerals.org/vesta/en/) cut some decimals for some weird reason.
 
 ## Crystal structure
 
