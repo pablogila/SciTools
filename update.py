@@ -1,35 +1,21 @@
+'''
+Script to update the SciTools repository from my Obsidian notes.
+Uses InputMaker, https://github.com/pablogila/InputMaker
+'''
 import inputmaker as im
 
-espresso = "/home/pablo/Documents/obsidian/Work ⚛️/Instruments/QuantumESPRESSO.md"
-castep   = "/home/pablo/Documents/obsidian/Work ⚛️/Instruments/CASTEP.md"
-cif2cell = "/home/pablo/Documents/obsidian/Work ⚛️/Instruments/cif2cell.md"
-ase      = "/home/pablo/Documents/obsidian/Work ⚛️/Instruments/ASE.md"
-zotero   = "/home/pablo/Documents/obsidian/Work ⚛️/Instruments/Zotero.md"
-struct   = "/home/pablo/Documents/obsidian/Work ⚛️/Instruments/StructuralDB.md"
-
-readme_espresso = "QuantumESPRESSO.md"
-readme_castep   = "CASTEP.md"
-readme_cif2cell = "cif2cell.md"
-readme_ase      = "ASE.md"
-readme_zotero   = "Zotero.md"
-readme_struct   = "StructuralDB.md"
-
-file_espresso = im.get_file(espresso)
-file_castep   = im.get_file(castep)
-file_cif2cell = im.get_file(cif2cell)
-file_ase      = im.get_file(ase)
-file_zotero   = im.get_file(zotero)
-file_struct   = im.get_file(struct)
-
+# Link my Obsidian notes with the final files
 dict_files = {
-    file_espresso : readme_espresso,
-    file_castep   : readme_castep,
-    file_cif2cell : readme_cif2cell,
-    file_ase      : readme_ase,
-    file_zotero   : readme_zotero,
-    file_struct   : readme_struct,
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/QuantumESPRESSO.md") : "QuantumESPRESSO.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/CASTEP.md")          : "CASTEP.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/cif2cell.md")        : "cif2cell.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/ASE.md")             : "ASE.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/Zotero.md")          : "Zotero.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/StructuralDB.md")    : "StructuralDB.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/Links.md")             : "Links.md",
 }
 
+# Dict to fix Obsidian wikilinks
 dict_fix = {
     '[[DFT]]'                : 'DFT',
     '[[Molecular Dynamics]]' : 'Molecular Dynamics',
@@ -47,11 +33,10 @@ dict_fix = {
     '[[ASE]]'                : '[ASE](ASE.md)',
 }
 
-# Check if there are differences between original and final files
-is_different = False
+# Copy and correct Obsidian notes
 for original, final in dict_files.items():
     im.copy_to_newfile(original, final)
     im.correct_file_with_dict(final, dict_fix)
-
+# Publish to Git repo
 im.git()
 

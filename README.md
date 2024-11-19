@@ -1,12 +1,22 @@
 # SciTools
 
-Tutorials and resources for scientific software:  
+Selection of tutorials, links and resources for your scientific endeavours.  
 
-- [Zotero](Zotero.md): Reference manager. Tutorial on how to set everything up.
-- [QuantumESPRESSO](QuantumESPRESSO.md): Instructions, tutorials, useful links and troubleshooting to use Quantum ESPRESSO for DFT calculations.
-- [CASTEP](CASTEP.md): Notes and useful links to use CASTEP for DFT calculations.
+## Solid-state physics calculations
+- [QuantumESPRESSO](QuantumESPRESSO.md)
+- [CASTEP](CASTEP.md)
 - [cif2cell](cif2cell.md)
 - [ASE](ASE.md)
-- [StructuralDB](StructuralDB.md): List of relevant databases with structural files, to be used in your simulations.
-- [LLM](LLM.md): Notes on Large Language Models for scientists living under a rock (archieved in 2023).
 
+## Database of databases
+[StructuralDB](StructuralDB.md) is a comprehensive list of relevant structural databases, useful to find a structural file to simulate your materials.
+
+## Reference managing
+[Zotero](Zotero.md) Reference manager. Get your citations in order.
+
+## Links to useful resource
+[Links](Links.md)
+
+## Contact
+Pablo Gila-Herranz  
+pgila001@ikasle.ehu.eus  
