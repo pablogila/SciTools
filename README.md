@@ -14,7 +14,7 @@ Selection of tutorials, links and resources for your scientific endeavours.
 ## Database of databases
 [StructuralDB](StructuralDB.md) is a comprehensive list of relevant structural databases, useful to find a structural file to simulate your materials.  
 
-## Links to useful resource
+## Links to useful resources
 [Links](Links.md) to other useful resources for science stuff.  
 
 ## Contact

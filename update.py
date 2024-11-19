@@ -32,6 +32,7 @@ dict_fix = {
     '[[cif2cell]]'                  : '[cif2cell](cif2cell.md)',
     '[[ASE]]'                       : '[ASE](ASE.md)',
     '[[ASE#Exporting outputs|ASE]]' : '[ASE](ASE.md)',
+    '[[Zotero]]'                    : '[Zotero](Zotero.md)'
 }
 
 # Copy and correct Obsidian notes

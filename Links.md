@@ -4,7 +4,7 @@ Useful tools for your scientific endeavours.
 
 ## Literature
 
-- [[Zotero]]. Reference manager. Get all your papers in one place.
+- [Zotero](Zotero.md). Reference manager. Get all your papers in one place.
 * [Inciteful](https://inciteful.xyz/). Paste a DOI and find related papers, using cross citations.
 * [Research Rabbit](https://researchrabbitapp.com/). Upload a BibTeX or connect to your Zotero account, and find papers related to your collection.
 
