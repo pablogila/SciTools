@@ -27,7 +27,86 @@ You can also create a custom citation key for any particular reference, by editi
 ## Renaming rules
 
 Zotero 7 has new and easier [renaming rules](https://www.zotero.org/support/file_renaming). For example, you can rename your PDFs as:  
-`\{{ citationKey }} - \{{ title }}`
+`\{{ citationKey }} - \{{ title }}`  
+(
+W
+i
+t
+h
+o
+u
+t
+ 
+t
+h
+e
+ 
+`
+\
+`
+ 
+s
+y
+m
+b
+o
+l
+;
+ 
+i
+t
+ 
+i
+s
+ 
+j
+u
+s
+t
+ 
+n
+e
+e
+d
+e
+d
+ 
+f
+o
+r
+ 
+t
+h
+e
+ 
+s
+t
+u
+p
+i
+d
+ 
+G
+i
+t
+H
+u
+b
+ 
+p
+a
+g
+e
+s
+ 
+t
+o
+ 
+l
+o
+a
+d
+)
 
 Zotero 6 had different rules, and also using ZotFile had a problem with subinexes; to fix those, check the [appendix](#renaming-titles-with-subindexes-via-zotfile). If you are using ZotMoov on Zotero v7 you can skip it.  
 
@@ -53,8 +132,87 @@ To fix that, simply go to `Edit, Preferences, Advanced, Config Editor` and click
 ```
 {"1": {"field": "title", "operations":[{"function": "replace", "regex": "<sub>", "replacement":"", "flags":"g"},{"function": "replace", "regex": "</sub>", "replacement":"", "flags":"g"}]}}
 ```
-You have now configured a custom User Wildcard. You can now extract the title without the HTML tags by writting `{\%1}` (without the `\`, it is needed for the stupid GitHub pages to work).  
+You have now configured a custom User Wildcard. You can now extract the title without the HTML tags by writting `\{%1}`.  
+(
+W
+i
+t
+h
+o
+u
+t
+ 
+t
+h
+e
+ 
+`
+\
+`
+ 
+s
+y
+m
+b
+o
+l
+;
+ 
+i
+t
+ 
+i
+s
+ 
+j
+u
+s
+t
+ 
+n
+e
+e
+d
+e
+d
+ 
+f
+o
+r
+ 
+t
+h
+e
+ 
+s
+t
+u
+p
+i
+d
+ 
+G
+i
+t
+H
+u
+b
+ 
+p
+a
+g
+e
+s
+ 
+t
+o
+ 
+l
+o
+a
+d
+)
 on the ZotFile renaming rules, located in `Tools, ZotFile Preferences, Renaming Rules`.  
-For example, to rename all PDFs as `CitationKey - Title`, you should configure ZotFile renaming rules as:
-`\{%b} - \{%1}`
+For example, to rename all PDFs as `CitationKey - Title`, you should configure ZotFile renaming rules as:  
+`\{%b} - \{%1}`  
 
