@@ -27,9 +27,7 @@ You can also create a custom citation key for any particular reference, by editi
 ## Renaming rules
 
 Zotero 7 has new and easier [renaming rules](https://www.zotero.org/support/file_renaming). For example, you can rename your PDFs as:  
-{%raw}
-`{{ citationKey }} - {{ title }}`
-{%endraw}
+`&lcub;{ citationKey }} - &lcub;{ title }}`
 
 Zotero 6 had different rules, and also using ZotFile had a problem with subinexes; to fix those, check the [appendix](#renaming-titles-with-subindexes-via-zotfile). If you are using ZotMoov on Zotero v7 you can skip it.  
 
@@ -58,7 +56,5 @@ To fix that, simply go to `Edit, Preferences, Advanced, Config Editor` and click
 You have now configured a custom User Wildcard. You can now extract the title without the HTML tags by writting `{\%1}` (without the `\`, it is needed for the stupid GitHub pages to work).  
 on the ZotFile renaming rules, located in `Tools, ZotFile Preferences, Renaming Rules`.  
 For example, to rename all PDFs as `CitationKey - Title`, you should configure ZotFile renaming rules as:
-{%raw}
 `{%b} - {%1}`
-{%endraw}
 

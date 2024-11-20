@@ -37,7 +37,8 @@ dict_fix = {
     '[[Zotero]]'                    : '[Zotero](Zotero.md)',
     '[[Torrent trackers]]'          : '[Torrent trackers](Torrent trackers.md)',
     '[[TorrentTrackers]]'           : '[TorrentTrackers](TorrentTrackers.md)',
-    '[[StructuralDB]]'              : '[StructuralDB](StructuralDB.md)'
+    '[[StructuralDB]]'              : '[StructuralDB](StructuralDB.md)',
+    r'{{'                           : '&lcub;{'
 }
 
 # Copy and correct Obsidian notes
