@@ -1,6 +1,6 @@
 # Quantum ESPRESSO
 
-[Quantum ESPRESSO](https://www.quantum-espresso.org/) is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials. It is preinstalled in Atlas & Hyperion.
+[Quantum ESPRESSO (web)](https://www.quantum-espresso.org/) is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials. It is preinstalled in [Atlas & Hyperion](https://scc.dipc.org/docs/).
 
 ## Inputs
 
@@ -92,7 +92,7 @@ Quantum ESPRESSO uses pseudos in UPF format, and can be obtained from:
 - [Quantum ESPRESSO documentation](https://www.quantum-espresso.org/documentation/)
 
 ## References
-- DFT
+- [DFT](https://en.wikipedia.org/wiki/Density_functional_theory)
 - [StackExchange - How to know optimal K-points grid values for good DFT calculation?](https://mattermodeling.stackexchange.com/questions/2347/how-to-know-optimal-k-points-grid-values-for-good-dft-calculation)
 - [Quantum Espresso Walkthrough](https://courses.engr.illinois.edu/mse404ela/sp2021/6.DFT-walkthrough.html)
 - [Tutorial on IR and Raman spectra with Quantum Espresso](https://blog.larrucea.eu/compute-ir-raman-spectra-qe/)

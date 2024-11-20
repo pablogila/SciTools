@@ -7,13 +7,13 @@ import inputmaker as im
 # Link my Obsidian notes with the final files
 dict_files = {
     im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/SciTools.md")           : "README.md",
-    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/Quantum ESPRESSO.md") : "Quantum ESPRESSO.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/QuantumESPRESSO.md") : "QuantumESPRESSO.md",
     im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/CASTEP.md")          : "CASTEP.md",
     im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/cif2cell.md")        : "cif2cell.md",
     im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/ASE.md")             : "ASE.md",
     im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/Zotero.md")          : "Zotero.md",
     im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/StructuralDB.md")    : "StructuralDB.md",
-    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/Torrent trackers.md")           : "Torrent trackers.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/TorrentTrackers.md")           : "TorrentTrackers.md",
 }
 
 # Dict to fix Obsidian wikilinks

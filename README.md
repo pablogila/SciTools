@@ -20,11 +20,11 @@ Useful tools and resources for your scientific endeavours.
 ## File managing tools
 
 - [FreeFileSync](https://freefilesync.org/). Sync backups of entire folders with the click of a button.
-- [Torrent trackers](Torrent trackers.md). Selection of nice torrent trackers, to share big files such as large computational outputs.
+- [[TorrentTrackers]]. Selection of nice torrent trackers, to share big files such as large computational outputs.
 
 ## Solid-state physics software
 
-- [Quantum ESPRESSO](Quantum ESPRESSO.md) resources
+- [[QuantumESPRESSO]] resources
 - [CASTEP](CASTEP.md) resources
 - [ASE](ASE.md) resources
 - [cif2cell](cif2cell.md) resources

@@ -18,7 +18,7 @@ We can do that with [ase.io](https://wiki.fysik.dtu.dk/ase/ase/io/io.html) as fo
 
 ## Exporting outputs
 
-We can export outputs from programs such as [Quantum ESPRESSO](Quantum ESPRESSO.md) to a .CIF format.
+We can export outputs from programs such as [[QuantumESPRESSO]] to a .CIF format.
 
 ## Obtaining cell parameters
 
