@@ -35,6 +35,7 @@ dict_fix = {
     '[[ASE#Exporting outputs|ASE]]' : '[ASE](ASE.md)',
     '[[Zotero]]'                    : '[Zotero](Zotero.md)',
     '[[Torrent trackers]]'          : '[Torrent trackers](Torrent trackers.md)',
+    '[[StructuralDB]]'              : '[StructuralDB](StructuralDB.md)'
 }
 
 # Copy and correct Obsidian notes

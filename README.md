@@ -33,7 +33,7 @@ Useful tools and resources for your scientific endeavours.
 
 ## Databases
 
-- [[StructuralDB]]. Comprehensive list of relevant material databases, useful to find structural files to simulate your materials
+- [StructuralDB](StructuralDB.md). Comprehensive list of relevant material databases, useful to find structural files to simulate your materials
 
 ## Chemistry tools
 
