@@ -38,7 +38,7 @@ dict_fix = {
     '[[Torrent trackers]]'          : '[Torrent trackers](Torrent trackers.md)',
     '[[TorrentTrackers]]'           : '[TorrentTrackers](TorrentTrackers.md)',
     '[[StructuralDB]]'              : '[StructuralDB](StructuralDB.md)',
-    r'{{'                           : r'\{{',
+    r'{{'                           : r'\\{{',
     '{%'                            : '{\%',
 }
 
@@ -49,7 +49,7 @@ for original, final in dict_files.items():
 # Correct Zotero notes
 zotero_warning = '(Without the `\` symbol; it is just needed for the stupid GitHub pages to load)  '
 im.insert_text_under_keyword(zotero_warning, '{\%', 'Zotero.md')
-im.insert_text_under_keyword(zotero_warning, r'\{{', 'Zotero.md')
+im.insert_text_under_keyword(zotero_warning, r'\\{{', 'Zotero.md')
 # Publish to Git repo
 im.git()
 
