@@ -27,7 +27,7 @@ You can also create a custom citation key for any particular reference, by editi
 ## Renaming rules
 
 Zotero 7 has new and easier [renaming rules](https://www.zotero.org/support/file_renaming). For example, you can rename your PDFs as:  
-`\{{ citationKey }} - \{{ title }}`  
+`{\{ citationKey }} - {\{ title }}`  
 
 Zotero 6 had different rules, and also using ZotFile had a problem with subinexes; to fix those, check the [appendix](#renaming-titles-with-subindexes-via-zotfile). If you are using ZotMoov on Zotero v7 you can skip it.  
 
