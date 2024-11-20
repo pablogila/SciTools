@@ -37,7 +37,7 @@ Useful tools and resources for your scientific endeavours.
 
 ## Chemistry tools
 
-- [PTable](https://ptable.com/) Periodic Table
+- [PTable](https://ptable.com/). Periodic Table
 - [IUPAC Periodic Table of the Elements and Isotopes](https://applets.kcvs.ca/IPTEI/IPTEI.html)
 - [ACS Solvent selection tool](https://www.acs.org/greenchemistry/research-innovation/tools-for-green-chemistry/solvent-tool.html)
 
@@ -53,10 +53,10 @@ Useful tools and resources for your scientific endeavours.
 
 > **Warning:** AI should not replace your own intelligence. It is just text completion. It might be useful eg. for coding, but *you* must be the one designing the code, otherwise it will create stupid routines leading nowhere, etc.
 
-- [Github Copilot](https://github.com/features/copilot) VSCode plugin that helps you write code, free with the university account. It also adds a chat window to get coding insights.
+- [Github Copilot](https://github.com/features/copilot). VSCode plugin that helps you write code, free with the university account. It also adds a chat window to get coding insights.
 - [Elicit](https://elicit.org/). Ask a Question, get summarized results from papers.
 - [Deepl Write](https://www.deepl.com/write). Check your grammar or translate, really useful even for scientific texts.
-- [HuggingChat](https://huggingface.co/chat/) Open source LLMs
+- [HuggingChat](https://huggingface.co/chat/). Open source LLMs
 - [Microsoft Copilot](https://copilot.microsoft.com/)
 - [Google Gemini](https://gemini.google.com/app)
 - [ChatGPT](https://chat.openai.com/)
@@ -66,7 +66,7 @@ Useful tools and resources for your scientific endeavours.
 - [SciTools](https://pablogila.github.io/SciTools/). Links, tutorials and resources for all your scientific endeavours.
 - [InputMaker](https://github.com/pablogila/InputMaker). Python package to edit text files easily, create inputs from templates, etc.
 - [Maat](https://github.com/pablogila/Maat). Python package for spectra analysis tools.
-- [PlantillaLatex](https://github.com/pablogila/PlantillaLatex) LaTeX template, with info and description of useful commands.
+- [PlantillaLatex](https://github.com/pablogila/PlantillaLatex). LaTeX template, with info and description of useful commands.
 
 ## Contact
 
