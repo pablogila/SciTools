@@ -4,7 +4,7 @@ The [Atomic Simulation Environment (ASE)](https://wiki.fysik.dtu.dk/ase/index.ht
 
 ## Preparing inputs
 
-We can create structural files for DFT or Molecular Dynamics software with ASE. We could also create inputs with Materials Studio, but that is paid software.
+We can create structural files for [DFT](https://en.wikipedia.org/wiki/Density_functional_theory) or [Molecular Dynamics](https://en.wikipedia.org/wiki/Molecular_dynamics) software with ASE. We could also create inputs with Materials Studio, but that is paid software.
 
 See example in [[Week 2024-11-04 MDanse#Xray and Neutron Responses]]
 
@@ -18,7 +18,7 @@ We can do that with [ase.io](https://wiki.fysik.dtu.dk/ase/ase/io/io.html) as fo
 
 ## Exporting outputs
 
-We can export outputs from programs such as [QuantumESPRESSO](QuantumESPRESSO.md) to a .CIF format.
+We can export outputs from programs such as [Quantum ESPRESSO](Quantum ESPRESSO.md) to a .CIF format.
 
 ## Obtaining cell parameters
 
