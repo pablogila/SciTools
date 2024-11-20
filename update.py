@@ -6,14 +6,14 @@ import inputmaker as im
 
 # Link my Obsidian notes with the final files
 dict_files = {
-    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/SciTools.md")           : "README.md",
-    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/QuantumESPRESSO.md") : "QuantumESPRESSO.md",
-    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/CASTEP.md")          : "CASTEP.md",
-    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/cif2cell.md")        : "cif2cell.md",
-    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/ASE.md")             : "ASE.md",
-    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/Zotero.md")          : "Zotero.md",
-    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/StructuralDB.md")    : "StructuralDB.md",
-    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/TorrentTrackers.md")           : "TorrentTrackers.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/SciTools.md")         : "README.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/QuantumESPRESSO.md")  : "QuantumESPRESSO.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/CASTEP.md")           : "CASTEP.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/cif2cell.md")         : "cif2cell.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/ASE.md")              : "ASE.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/Zotero.md")           : "Zotero.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/StructuralDB.md")     : "StructuralDB.md",
+    im.get_file("/home/pablo/Documents/obsidian/Work ⚛️/Instruments/TorrentTrackers.md")  : "TorrentTrackers.md",
 }
 
 # Dict to fix Obsidian wikilinks
@@ -29,12 +29,14 @@ dict_fix = {
     '[[Phonopy]]'                   : '[Phonopy](https://phonopy.github.io/phonopy/)',
     '[[CP2K]]'                      : '[CP2K](https://www.cp2k.org/about)',
     '[[Quantum ESPRESSO]]'          : '[Quantum ESPRESSO](Quantum ESPRESSO.md)',
+    '[[QuantumESPRESSO]]'           : '[QuantumESPRESSO](QuantumESPRESSO.md)',
     '[[CASTEP]]'                    : '[CASTEP](CASTEP.md)',
     '[[cif2cell]]'                  : '[cif2cell](cif2cell.md)',
     '[[ASE]]'                       : '[ASE](ASE.md)',
     '[[ASE#Exporting outputs|ASE]]' : '[ASE](ASE.md)',
     '[[Zotero]]'                    : '[Zotero](Zotero.md)',
     '[[Torrent trackers]]'          : '[Torrent trackers](Torrent trackers.md)',
+    '[[TorrentTrackers]]'           : '[TorrentTrackers](TorrentTrackers.md)',
     '[[StructuralDB]]'              : '[StructuralDB](StructuralDB.md)'
 }
 
