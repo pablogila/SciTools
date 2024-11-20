@@ -39,7 +39,7 @@ dict_fix = {
     '[[TorrentTrackers]]'           : '[TorrentTrackers](TorrentTrackers.md)',
     '[[StructuralDB]]'              : '[StructuralDB](StructuralDB.md)',
     r'{{'                           : r'\{{',
-    '{%'                            : '\{%',
+    '{%'                            : '{\%',
 }
 
 # Copy and correct Obsidian notes
