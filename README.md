@@ -2,11 +2,12 @@
 
 Useful tools and resources for your scientific endeavours.
 
-## Literature
+## Literature and note-taking
 
 - [Zotero](Zotero.md). Reference manager. Get all your papers in one place.
-* [Inciteful](https://inciteful.xyz/). Paste a DOI and find related papers, using cross citations.
-* [Research Rabbit](https://researchrabbitapp.com/). Upload a BibTeX or connect to your Zotero account, and find papers related to your collection.
+- [Inciteful](https://inciteful.xyz/). Paste a DOI and find related papers, using cross citations.
+- [Research Rabbit](https://researchrabbitapp.com/). Upload a BibTeX or connect to your Zotero account, and find papers related to your collection.
+- [Obsidian](https://obsidian.md/). Note-taking app in markdown format, with cross-references. (Note that this page was creted with Obsidian!)
 
 ## Documents and graphs
 
@@ -63,14 +64,14 @@ Useful tools and resources for your scientific endeavours.
 
 ## Other GitHub repositories
 
-- [SciTools](https://pablogila.github.io/SciTools/). Links, tutorials and resources for all your scientific endeavours.
+- [SciTools](https://pablogila.github.io/SciTools/). Links, tutorials and resources for all your scientific endeavours (this page).
 - [InputMaker](https://github.com/pablogila/InputMaker). Python package to edit text files easily, create inputs from templates, etc.
 - [Maat](https://github.com/pablogila/Maat). Python package for spectra analysis tools.
 - [PlantillaLatex](https://github.com/pablogila/PlantillaLatex). LaTeX template, with info and description of useful commands.
 
 ## Contact
 
-Pablo Gila-Herranz, pgila001@ikasle.ehu.eus  
-PhD Student @ Quantum Beams & Computation for Sustainable Materials Group  
-Materials Physics Center CFM-MPC (CSIC-UPV)  
+> Pablo Gila-Herranz, pgila001@ikasle.ehu.eus  
+> PhD Student @ Quantum Beams & Computation for Sustainable Materials Group  
+> Materials Physics Center CFM-MPC (CSIC-UPV)  
 
