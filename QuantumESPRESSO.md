@@ -4,10 +4,10 @@
 
 ## Inputs
 
-It is useful to follow a custom [[Naming conventions#For calculations|naming convention]] for the calculations, as
-`MATERIAL_yyMMddx_CALCULATION_EXTRA`
-eg.
-`MAPI-ND-5_240729a_relax_test`
+It is useful to follow a custom naming conventions for the calculations, as:  
+`MATERIAL_yyMMddx_CALCULATION_EXTRA`  
+eg.  
+`MAPI-ND-5_240729a_relax_test`  
 
 PWsfc pw.x inputs need a `filename.in`, called by a Slurm file.
 Check the syntax of the input in [Quantum ESPRESSO input data description](https://www.quantum-espresso.org/documentation/input-data-description/)
@@ -30,6 +30,7 @@ To export to a .CIF file after the calculation, we can use [ASE](ASE.md). The gr
 ## Crystal structure
 
 In Quantum Espresso, the structure information is provided by `ibrav` number, and corresponding `celldm` values or lattice constants and cosines of angle between the axes. There are [14 possible ibrav numbers](https://pranabdas.github.io/espresso/setup/crystal-structure).
+
 It is also possible to set `ibrav=0` and provide lattice vectors in `CELL_PARAMETERS`, with sufficiently decimal accuracy to facilitate symmetry detection. This is done automatically when creating an input from a CIF file with [cif2cell](cif2cell.md), as
 ```bash
 cif2cell CsPbI3.cif -p quantum-espresso -o relax.in
@@ -67,9 +68,9 @@ Kx Ky Kz 1 1 1 # (shifted)
 
 ## Pseudo-potentials
 
-We can choose between Norm-Conserving (NC), PAW and Ultra Soft (US) pseudopotentials.
-For MAPI we previously used NC pseudos.
-PAW pseudos are better than US for perovskites, according to a [vasp workshop](https://www.vasp.at/vasp-workshop/pseudoppdatabase.pdf).
+We can choose between Norm-Conserving (NC), PAW and Ultra Soft (US) pseudopotentials.  
+We previously used NC pseudos for perovskites in [CASTEP](CASTEP.md).  
+PAW pseudos are better than US for perovskites, according to a [vasp workshop](https://www.vasp.at/vasp-workshop/pseudoppdatabase.pdf).  
 
 Quantum ESPRESSO uses pseudos in UPF format, and can be obtained from:
 - [Pseudo-Dojo](http://www.pseudo-dojo.org/)
@@ -127,7 +128,7 @@ The code reduces the starting self-consistency threshold `conv_thr` when approac
 ([PWscf User's Guide](https://www.quantum-espresso.org/Doc/user_guide_PDF/pw_user_guide.pdf))
 
 It is not an error *per se*, only a warning. If the forces are small it may be usable.
-(SOURCE??)
+(SOURCE?? I forgot the link)
 
 ## Error: bfgs failed, convergence not achieved
 
@@ -136,8 +137,8 @@ bfgs failed after  85 scf cycles and  79 bfgs steps, convergence not achieved
 (criteria: energy <  3.5E-12 Ry, force <  3.9E-07 Ry/Bohr, cell <  1.0E-04 kbar)
 ```
 
-Make sure that the energy is actually converging. Increasing the number of `electron_maxstep` will only help if the energy is converging slowly. Otherwise if the accuracy is alternating rapidly, or it converges up to a certain value and diverges again, then this might not help at all. That would indicate a problematic input file, or simply that the system may be characterized by ”floppy” low-energy modes, that make very difficult (and of little use anyway) to reach a well converged structure, no matter what.
-More relaxed thresholds and a big `upscale` (eg ~1000000)
+Make sure that the energy is actually converging. Increasing the number of `electron_maxstep` will only help if the energy is converging slowly. Otherwise if the accuracy is alternating rapidly, or it converges up to a certain value and diverges again, then this might not help at all. That would indicate a problematic input file, or simply that the system may be characterized by ”floppy” low-energy modes, that make very difficult (and of little use anyway) to reach a well converged structure, no matter what. More relaxed thresholds and a big `upscale` (eg ~1000000) could help.
+
 To check how the SCF accuracy changes, we can use the following command:
 ```bash
 grep -s 'estimated scf accuracy' scf.out 
