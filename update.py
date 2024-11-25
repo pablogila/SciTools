@@ -45,7 +45,7 @@ dict_fix = {
 
 # Copy and correct Obsidian notes
 for original, final in dict_files.items():
-    im.copy_to_newfile(original, final)
+    im.copy_file(original, final)
     im.correct_file_with_dict(final, dict_fix)
 # Correct Zotero notes
 zotero_warning = '(Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  '

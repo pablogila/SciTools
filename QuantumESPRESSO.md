@@ -4,7 +4,7 @@
 
 ## Inputs
 
-It is useful to follow a custom naming conventions for the calculations, as:  
+It is useful to follow a custom naming convention for the calculations, as:  
 `MATERIAL_yyMMddx_CALCULATION_EXTRA`  
 eg.  
 `MAPI-ND-5_240729a_relax_test`  
