@@ -58,3 +58,8 @@ You have now configured a custom User Wildcard. You can now extract the title wi
 For example, to rename all PDFs as `CitationKey - Title`, you should configure ZotFile renaming rules as `{\%b} - {\%1}`.  
 (Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  
 
+test <span>{\{text}}</span> hola
+(Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  
+test2 <span>{\%text}</span>
+(Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  
+
