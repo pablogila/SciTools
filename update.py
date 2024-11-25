@@ -48,7 +48,7 @@ for original, final in dict_files.items():
     im.copy_file(original, final)
     im.correct_file_with_dict(final, dict_fix)
 # Correct Zotero notes
-zotero_warning = '(Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  '
+zotero_warning = "(Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  "
 im.insert_text_under_keyword(zotero_warning, '{\%', 'Zotero.md')
 im.insert_text_under_keyword(zotero_warning, r'{\{', 'Zotero.md')
 # Publish to Git repo
