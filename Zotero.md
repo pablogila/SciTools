@@ -57,4 +57,5 @@ For example, to rename all PDFs as `CitationKey - Title`, you should configure Z
 
 test <span>{\{text}}</span> hola
 test2 <span>{\%text}</span>
+<p>`{\{text}}`</p>
 
