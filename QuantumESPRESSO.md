@@ -36,6 +36,8 @@ It is also possible to set `ibrav=0` and provide lattice vectors in `CELL_PARAME
 cif2cell CsPbI3.cif -p quantum-espresso -o relax.in
 ```
 
+To fix the angles, for example in a simple orthorhombic cell, we must specify `ibrav=8`, providing A, B and C, and adding `cell_dofree='ibrav'` to fix the angles at 90º.
+
 ## Structure optimization
 
 Following [Pranabdas' guide](https://pranabdas.github.io/espresso/hands-on/structure-optimization), the relaxation runs with pw.x:
@@ -81,7 +83,7 @@ Quantum ESPRESSO uses pseudos in UPF format, and can be obtained from:
 
 ## Useful tools
 - [cif2cell](cif2cell.md)
-- [MaterialsCloud - Quantum ESPRESSO PWscf input generator and structure visualizer](https://www.materialscloud.org/work/tools/qeinputgenerator)
+- [MaterialsCloud - Quantum ESPRESSO PWscf input generator and structure visualizer](https://qeinputgenerator.materialscloud.io/)
 - [MaterialsCloud - Interactive phonon visualizer](https://interactivephonon.materialscloud.io/)
 - [MaterialsCloud - See K-path](https://www.materialscloud.org/work/tools/seekpath)
 - [YAIV (by Martin) Yet another Ab-Initio Visualizer](https://github.com/mgamigo/YAIV)
@@ -146,5 +148,19 @@ grep -s 'estimated scf accuracy' scf.out
 We may then consider reducing `conv_thr` with a less-tightened value.
 ([Stack Exchange](https://mattermodeling.stackexchange.com/questions/12592/convergence-not-completed-in-scf-for-bands), [PWscf User's Guide](https://www.quantum-espresso.org/Doc/user_guide_PDF/pw_user_guide.pdf))
 
-A desperate option is to copy the final coordinates to the input file and run it again, sometimes it may work. 
+A desperate option is to copy the final coordinates to the input file and run it again, sometimes it may work.
+
+Changing the `ion_dynamics` can also work.
+
+## Error: dE0s is positive which should never happen
+
+```
+Error in routine bfgs (1):
+dE0s is positive which should never happen
+```
+
+This kind of errors invariably happens when you are very close to the minimum and you have some numerical noise on forces. For most cases, the system is sufficiently  
+relaxed.
+
+We can try to run the calculation again. If it persists, slightly modify some atoms randomly and run again. [(source)](https://pw-forum.pwscf.narkive.com/r5X3gkdU/error-in-routine-bfgs-1-de0s-is-positive-which-should-never-happen). You can also try running the calculation from the last positions [(source)](https://pw-forum.pwscf.narkive.com/r5X3gkdU/error-in-routine-bfgs-1-de0s-is-positive-which-should-never-happen).
 
