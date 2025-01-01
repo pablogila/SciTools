@@ -75,3 +75,6 @@ Useful tools and resources for your scientific endeavours.
 > PhD Student @ Quantum Beams & Computation for Sustainable Materials Group  
 > Materials Physics Center CFM-MPC (CSIC-UPV)  
 
+
+---
+Last updated on 2025-01-01

@@ -3,6 +3,10 @@ Script to update the SciTools repository from my Obsidian notes.
 Uses ThotPy, https://github.com/pablogila/ThotPy
 '''
 import thotpy as th
+import time
+
+th.call.here()
+date = time.strftime("%Y-%m-%d", time.localtime())
 
 # Link my Obsidian notes with the final files
 dict_files = {
@@ -46,6 +50,7 @@ dict_fix = {
 # Copy and correct Obsidian notes
 for original, final in dict_files.items():
     th.file.from_template(original, final, None, dict_fix)
+th.text.insert_at(f'\n---\nLast updated on {date}', 'README.md', -1)
 # Correct Zotero notes
 zotero_warning = r"(Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  "
 th.text.insert_under(zotero_warning, r"{\%", 'Zotero.md')
