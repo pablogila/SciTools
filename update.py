@@ -1,8 +1,8 @@
 '''
 Script to update the SciTools repository from my Obsidian notes.
-Uses InputMaker, https://github.com/pablogila/InputMaker
+Uses ThotPy, https://github.com/pablogila/ThotPy
 '''
-import inputmaker as im
+import thotpy as th
 
 # Link my Obsidian notes with the final files
 dict_files = {
@@ -45,12 +45,11 @@ dict_fix = {
 
 # Copy and correct Obsidian notes
 for original, final in dict_files.items():
-    im.copy_file(original, final)
-    im.correct_file_with_dict(final, dict_fix)
+    th.file.from_template(original, final, None, dict_fix)
 # Correct Zotero notes
 zotero_warning = r"(Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  "
-im.insert_text_under_keyword(zotero_warning, r"{\%", 'Zotero.md')
-im.insert_text_under_keyword(zotero_warning, r"{\{", 'Zotero.md')
+th.text.insert_under(zotero_warning, r"{\%", 'Zotero.md')
+th.text.insert_under(zotero_warning, r"{\{", 'Zotero.md')
 # Publish to Git repo
-im.git()
+th.call.git()
 

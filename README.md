@@ -12,7 +12,7 @@ Useful tools and resources for your scientific endeavours.
 ## Documents and graphs
 
 - [WebPlotDigitizer](https://github.com/automeris-io/WebPlotDigitizer). Extract numerical data from plotted images.
-- [Pix2Tex](https://p2t.behye.com/). Write LaTeX equations by uploading a screenshot.
+- [Pix2Tex](https://p2t.breezedeus.com/). Write LaTeX equations by uploading a screenshot.
 - [Detextify](https://detexify.kirelabs.org/classify.html). Find that weird LaTeX symbol.
 - [Tables Generator](https://www.tablesgenerator.com/). Create tables in different formats: LaTeX, markdown...
 - [Draw.io](https://www.drawio.com/). Create nice diagrams and flowcharts.
@@ -65,8 +65,8 @@ Useful tools and resources for your scientific endeavours.
 ## Other GitHub repositories
 
 - [SciTools](https://pablogila.github.io/SciTools/). Links, tutorials and resources for all your scientific endeavours (this page).
-- [InputMaker](https://github.com/pablogila/InputMaker). Python package to edit text files easily, create inputs from templates, etc.
-- [Maat](https://github.com/pablogila/Maat). Python package for spectra analysis tools.
+- [ThotPy](https://github.com/pablogila/ThotPy). Python package to edit text files easily, create inputs from templates or check results from *ab-initio* calculations, etc.
+- [MaatPy](https://github.com/pablogila/MaatPy). Python package for unit conversion and spectra analysis.
 - [PlantillaLatex](https://github.com/pablogila/PlantillaLatex). LaTeX template, with info and description of useful commands.
 
 ## Contact
