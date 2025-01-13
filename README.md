@@ -1,6 +1,6 @@
 # SciTools
 
-Useful tools and resources for your scientific endeavours.
+Useful tools and resources for your scientific research.
 
 ## Literature and note-taking
 
