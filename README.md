@@ -20,6 +20,7 @@ Useful tools and resources for your scientific endeavours.
 
 ## File managing tools
 
+- [Git](Git.md). Please use a version tracker for your code. Please.
 - [FreeFileSync](https://freefilesync.org/). Sync backups of entire folders with the click of a button.
 - [TorrentTrackers](TorrentTrackers.md). Selection of nice torrent trackers, to share big files such as large computational outputs.
 
@@ -65,8 +66,7 @@ Useful tools and resources for your scientific endeavours.
 ## Other GitHub repositories
 
 - [SciTools](https://pablogila.github.io/SciTools/). Links, tutorials and resources for all your scientific endeavours (this page).
-- [ThotPy](https://github.com/pablogila/ThotPy). Python package to edit text files easily, create inputs from templates or check results from *ab-initio* calculations, etc.
-- [MaatPy](https://github.com/pablogila/MaatPy). Python package for unit conversion and spectra analysis.
+- [Aton](https://pablogila.github.io/Aton). Python package with powerful and comprehensive tools for cutting-edge materials research, focused on (but not limited to) neutron science. It provides a range of spectral analysis tools and physico-chemical constants. It also also allows you to easily create, edit and analyse all kinds of text files, with a special focus on *ab-initio* calculations.
 - [PlantillaLatex](https://github.com/pablogila/PlantillaLatex). LaTeX template, with info and description of useful commands.
 
 ## Contact
@@ -77,4 +77,4 @@ Useful tools and resources for your scientific endeavours.
 
 
 ---
-Last updated on 2025-01-01
+Last updated on 2025-01-13

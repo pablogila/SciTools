@@ -2,10 +2,11 @@
 Script to update the SciTools repository from my Obsidian notes.
 Uses ThotPy, https://github.com/pablogila/ThotPy
 '''
-import thotpy as th
+from aton import text
+from aton.st import call
 import time
 
-th.call.here()
+call.here()
 date = time.strftime("%Y-%m-%d", time.localtime())
 
 # Link my Obsidian notes with the final files
@@ -18,6 +19,7 @@ dict_files = {
     '/home/pablo/Documents/obsidian/Work ⚛️/Instruments/Zotero.md'          : 'Zotero.md',
     '/home/pablo/Documents/obsidian/Work ⚛️/Instruments/StructuralDB.md'    : 'StructuralDB.md',
     '/home/pablo/Documents/obsidian/Work ⚛️/Instruments/TorrentTrackers.md' : 'TorrentTrackers.md',
+    '/home/pablo/Documents/obsidian/Work ⚛️/Instruments/Git.md'             : 'Git.md',
 }
 
 # Dict to fix Obsidian wikilinks
@@ -42,19 +44,20 @@ dict_fix = {
     '[[Torrent trackers]]'          : '[Torrent trackers](Torrent trackers.md)',
     '[[TorrentTrackers]]'           : '[TorrentTrackers](TorrentTrackers.md)',
     '[[StructuralDB]]'              : '[StructuralDB](StructuralDB.md)',
-    '[[Naming conventions#For calculations|naming convention]]' : 'naming convention',
+    '[[Git]]'                       : '[Git](Git.md)',
     r"{{"                           : r"{\{",
     r"{%"                           : r"{\%",
+    '[[Naming conventions#For calculations|naming convention]]' : 'naming convention',
 }
 
 # Copy and correct Obsidian notes
 for original, final in dict_files.items():
-    th.file.from_template(original, final, None, dict_fix)
-th.text.insert_at(f'\n---\nLast updated on {date}', 'README.md', -1)
+    text.edit.from_template(original, final, dict_fix)
+text.edit.insert_at('README.md', f'\n---\nLast updated on {date}',  -1)
 # Correct Zotero notes
 zotero_warning = r"(Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  "
-th.text.insert_under(zotero_warning, r"{\%", 'Zotero.md')
-th.text.insert_under(zotero_warning, r"{\{", 'Zotero.md')
+text.edit.insert_under('Zotero.md', zotero_warning, r"{\%")
+text.edit.insert_under('Zotero.md', zotero_warning, r"{\{")
 # Publish to Git repo
-th.call.git()
+call.git()
 

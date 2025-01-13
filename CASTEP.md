@@ -165,7 +165,7 @@ We can create a supercell in the process of converting the file, adding an extra
 cif2cell TEST.cif -p castep --supercell=[k,l,m] -o TEST.cell
 ```
 
-To batch convert many `.cell` inputs in one go with *cif2cell*, we can use a script like [InputMaker](https://github.com/pablogila/InputMaker):
+To batch convert many `.cell` inputs in one go with *cif2cell*, we can use a script like [InputMaker](https://github.com/pablogila/InputMaker) (deprecated):
 ```shell
 python3 inputmaker.py -castep --supercell=[k,l,m]
 ```

@@ -26,9 +26,7 @@ You can also create a custom citation key for any particular reference, by editi
 
 ## Renaming rules
 
-Zotero 7 has new and easier [renaming rules](https://www.zotero.org/support/file_renaming). For example, you can rename your PDFs as `{\{ citationKey }} - {\{ title }}`.  
-(Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  
-(Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  
+Zotero 7 has new and easier [renaming rules](https://www.zotero.org/support/file_renaming), on `Settings, General, File Renaming`. For example, you can rename your PDFs as `{\{ citationKey }} - {\{ title }}`.   
 
 Zotero 6 had different rules, and also using ZotFile had a problem with subinexes; to fix those, check the [appendix](#renaming-titles-with-subindexes-via-zotfile). If you are using ZotMoov on Zotero v7 you can skip it.  
 
@@ -36,7 +34,7 @@ Zotero 6 had different rules, and also using ZotFile had a problem with subinexe
 
 You can automatically save your pdfs to a custom folder (to sync it, etc) with ZotMoov.
 Go to the Zotero 7 settings, to `Settings, Advanced, Files and Folders, Linked Attachment Base Directory`, and choose there your custom folder to save all tour PDFs.
-Now, you must set the same folder in ZotMoov. To do that, go to `Settings, ZotMoov` and write the same folder on `Directory to Move Files To`. Also in ZotMoov settings, leave empty the `Source folder for Attaching New Files` setting. On ZotMoov's `Other Settings`, set `File Behavior` to `More`, and check all checkboxes.  
+Now, you must set the same folder in ZotMoov. To do that, go to `Settings, ZotMoov` and write the same folder on `Directory to Move/Copy Files To`. Also in ZotMoov settings, leave empty the `Search folder for Attaching New Files` setting. On ZotMoov's `Other Settings`, set `File Behavior` to `More`, and check all checkboxes.  
 
 If you are using a Zotero version < 7, you can still use ZotMoov, or ZotFile instead (although it is discontinued). To automatically move your PDFs with ZotFile to a custom folder, go to `Tools, ZotFile Preferences, General Settings, Location of Files, Custom Location` and select your desired folder. This same folder should also be specified for Zotero itself, at `Edit, Preferences, Advanced, Files and Folders, Linked Attachment Base Directory`.  
 
@@ -55,8 +53,5 @@ To fix that, simply go to `Edit, Preferences, Advanced, Config Editor` and click
 {"1": {"field": "title", "operations":[{"function": "replace", "regex": "<sub>", "replacement":"", "flags":"g"},{"function": "replace", "regex": "</sub>", "replacement":"", "flags":"g"}]}}
 ```
 You have now configured a custom User Wildcard. You can now extract the title without the HTML tags, by going to `Tools, ZotFile Preferences, Renaming Rules` and setting it to `{\%1}`.  
-(Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  
 For example, to rename all PDFs as `CitationKey - Title`, you should configure ZotFile renaming rules as `{\%b} - {\%1}`.  
-(Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  
-(Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  
 
