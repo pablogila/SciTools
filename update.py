@@ -1,6 +1,6 @@
 '''
 Script to update the SciTools repository from my Obsidian notes.
-Uses ThotPy, https://github.com/pablogila/ThotPy
+Uses ATON, https://github.com/pablogila/ATON
 '''
 from aton import txt
 from aton.st import call
