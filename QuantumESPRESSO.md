@@ -156,7 +156,7 @@ The code reduces the starting self-consistency threshold `conv_thr` when approac
 It is not an error *per se*, only a warning. If the forces are small it may be usable.
 (SOURCE?? I forgot the link)
 
-## Error: bfgs failed, convergence not achieved
+### Error: bfgs failed, convergence not achieved
 
 ```
 bfgs failed after  85 scf cycles and  79 bfgs steps, convergence not achieved
@@ -178,7 +178,7 @@ BFGS can rarely hold `forc_con_thr` lower than $10^{-7}$, so making it less tigh
 
  The translational invariance in the calculations is not perfect, which results in a loss of precision in the forces, which can be tricky for low `forc_conv_thr` values. The situation can improve somewhat by increasing the `ecutrho` cutoff. [(source)](https://web.mit.edu/espresso_v6.1/i386_linux26/qe-6.1/PW/Doc/user_guide/node21.html)
  
-## Error: dE0s is positive which should never happen
+### Error: dE0s is positive which should never happen
 
 ```
 Error in routine bfgs (1):

@@ -2,7 +2,7 @@
 Script to update the SciTools repository from my Obsidian notes.
 Uses ThotPy, https://github.com/pablogila/ThotPy
 '''
-from aton import text
+from aton import txt
 from aton.st import call
 import time
 
@@ -52,12 +52,12 @@ dict_fix = {
 
 # Copy and correct Obsidian notes
 for original, final in dict_files.items():
-    text.edit.from_template(original, final, dict_fix)
-text.edit.insert_at('README.md', f'\n---\nLast updated on {date}',  -1)
+    txt.edit.from_template(original, final, dict_fix)
+txt.edit.insert_at('README.md', f'\n---\nLast updated on {date}',  -1)
 # Correct Zotero notes
 zotero_warning = r"(Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  "
-text.edit.insert_under('Zotero.md', zotero_warning, r"{\%")
-text.edit.insert_under('Zotero.md', zotero_warning, r"{\{")
+txt.edit.insert_under('Zotero.md', zotero_warning, r"{\%")
+txt.edit.insert_under('Zotero.md', zotero_warning, r"{\{")
 # Publish to Git repo
 call.git()
 

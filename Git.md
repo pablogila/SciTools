@@ -5,8 +5,8 @@
 - [Branches](#branches)
 - [Tags](#tags)
 - [Stash](#stash)
-- [[#Uploading an existing git repository]]
-- [[#Revert to a previous commit]]
+- [Upload an existing repo](#upload-an-existing-repo)
+- [Revert to a previous commit](#revert-to-a-previous-commit)
 
 ## Basic workflow
 
@@ -34,7 +34,9 @@ Optional:
 `git tag <tag_name> HEAD` (include a release tag)  
 
 Push your local commits to the remote repo  
-`git push` / `git push --tags` / `git push origin main --tags` (if on main branch)  
+`git push` or  
+`git push --tags` or  
+`git push origin main --tags` (if on main branch)  
 
 ## Branches
 
@@ -52,7 +54,8 @@ Or if you’d like to start at a specific revision, add that revision’s hash a
 `git branch <BRANCH> 2b504bee`  
 
 Switch to a new branch:  
-`git switch <BRANCH>`  or  `git checkout <BRANCH>`  
+`git switch <BRANCH>` or  
+`git checkout <BRANCH>`  
 Switch to a remote branch:  
 `git checkout --track origin/<BRANCH>`  
 
@@ -102,7 +105,7 @@ To pull and update your local repo from the remote one, with uncommited local ch
 Depending if you want to apply or discard the stashed changes:  
 `git stash apply` OR `git stash clear`  
 
-## Uploading an existing git repository
+## Upload an existing repo
 
 Make a git repository in your existing work:  
 `git init`  

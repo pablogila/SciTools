@@ -16,7 +16,6 @@ Useful tools and resources for your scientific research.
 - [Detextify](https://detexify.kirelabs.org/classify.html). Find that weird LaTeX symbol.
 - [Tables Generator](https://www.tablesgenerator.com/). Create tables in different formats: LaTeX, markdown...
 - [Draw.io](https://www.drawio.com/). Create nice diagrams and flowcharts.
-- [Google Reverse Image Search](https://images.google.com/). Useful to find the source of that image that you don't know where it came from.
 
 ## File managing tools
 
@@ -66,7 +65,7 @@ Useful tools and resources for your scientific research.
 ## Other GitHub repositories
 
 - [SciTools](https://pablogila.github.io/SciTools/). Links, tutorials and resources for all your scientific endeavours (this page).
-- [Aton](https://pablogila.github.io/Aton). Python package with powerful and comprehensive tools for cutting-edge materials research, focused on (but not limited to) neutron science. It provides a range of spectral analysis tools and physico-chemical constants. It also also allows you to easily create, edit and analyse all kinds of text files, with a special focus on *ab-initio* calculations.
+- [Aton](https://pablogila.github.io/ATON). Python package with powerful and comprehensive tools for cutting-edge materials research, focused on (but not limited to) neutron science. It provides a range of spectral analysis tools and physico-chemical constants. It also also allows you to easily create, edit and analyse all kinds of text files, with a special focus on *ab-initio* calculations.
 - [PlantillaLatex](https://github.com/pablogila/PlantillaLatex). LaTeX template, with info and description of useful commands.
 
 ## Contact
@@ -77,4 +76,4 @@ Useful tools and resources for your scientific research.
 
 
 ---
-Last updated on 2025-01-13
+Last updated on 2025-01-22
