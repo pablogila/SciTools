@@ -7,6 +7,7 @@
 - [Stash](#stash)
 - [Upload an existing repo](#upload-an-existing-repo)
 - [Revert to a previous commit](#revert-to-a-previous-commit)
+- [Download only specific folders from a repo](#download-only-specific-folders-from-a-repo)
 
 ## Basic workflow
 
@@ -65,6 +66,11 @@ Publish the local branch:
 Merge the branch to the main:  
 `git switch main`  
 `git merge <BRANCH>`  
+
+Delete remote branch ('`<remote_name>`' is usually '`origin`'):  
+`git push -d <remote_name> <branchname>`  
+Delete local branch:  
+`git branch -d <branchname>`  
 
 ## Tags
 
@@ -125,4 +131,22 @@ You can revert to the last commit with a stash, if there were no new commits.
 To revert to a previous commit, see the lasts ones, and revert to the desired commit:  
 `git log`  
 `git revert <commit_hash>`  
+
+## Download only specific folders from a repo
+
+Sometimes an online repository might be several GBs in size, but you may only need a single folder. Don't worry, you don't need to download the whole repo!  
+
+An easy way to download a single folder is to paste its permalink into [DownGit](https://downgit.evecalm.com/).  
+
+If you still prefer to use the terminal,  
+```bash
+mkdir <repo>
+cd <repo>
+git init
+git remote add -f origin <url>
+git config core.sparseCheckout true
+echo "some/dir/" >> .git/info/sparse-checkout
+echo "another/sub/tree" >> .git/info/sparse-checkout
+git pull origin master
+```
 

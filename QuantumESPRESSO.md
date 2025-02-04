@@ -11,12 +11,13 @@ It is useful to follow a custom naming convention for the calculations, as:
 eg.  
 `MAPI-ND-5_240729a_relax_test`  
 
-Inputs for *PWsfc pw.x* are a `filename.in`, which is usually called from a Slurm file with MPI paralellization. For example, for a geometry optimization calculation, we would run:
-```
-mpirun pw.x -inp relax.in > relax.out
+Inputs for *PWsfc pw.x* are `filename.in`, which is usually called from a Slurm file with MPI paralellization. For example, for a geometry optimization calculation we would run (source: [Atlas & Hyperion](https://scc.dipc.org/docs/) HPC [wiki on QE](https://scc.dipc.org/docs/software/applications/quantum-espresso/)):
 ```
 
-Input values are in atomic units, unless stated otherwise. This means that energy units are in *Rydbergs*, and distance units in *bohrs*. We can convert between these units easily with the [Maat](https://github.com/pablogila/Maat) python package.
+srun --cpu_bind=cores pw.x input.in > output.out
+```
+
+Input values are in atomic units, unless stated otherwise. This means that energy units are in *Rydbergs*, and distance units in *bohrs*. We can convert between these units easily with the [ATON](https://pablogila.github.io/ATON) Python package.
 
 Note that **energy** is an extensive parameter. Consequently, the thresholds for the energy are also extensive, so these depend on the number of atoms of the system.
 
@@ -114,6 +115,7 @@ Quantum ESPRESSO uses pseudos in UPF format, and can be obtained from:
 - [Quantum Espresso Walkthrough](https://courses.engr.illinois.edu/mse404ela/sp2021/6.DFT-walkthrough.html)
 
 ## Useful tools
+- [ATON](https://pablogila.github.io/ATON) Contains a Python interface for QE calculations
 - [cif2cell](cif2cell.md)
 - [MaterialsCloud - Quantum ESPRESSO PWscf input generator and structure visualizer](https://qeinputgenerator.materialscloud.io/)
 - [MaterialsCloud - Interactive phonon visualizer](https://interactivephonon.materialscloud.io/)
