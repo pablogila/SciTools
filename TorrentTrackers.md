@@ -6,8 +6,9 @@ Torrent trackers help people find each other. They don't store the files themsel
 
 ## Torrent clients
 
-install it to upload and download torrents.
-- [Transmission](https://transmissionbt.com/)
+Install it to upload and download torrents.
+- [Transmission](https://transmissionbt.com/) (easy to use)
+- [qBittorrent](https://www.qbittorrent.org/) (more functions)
 
 ## Tracker lists
 
