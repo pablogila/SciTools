@@ -66,7 +66,7 @@ Useful tools and resources for your scientific research.
 ## Other GitHub repositories
 
 - [SciTools](https://pablogila.github.io/SciTools/). Links, tutorials and resources for all your scientific endeavours (this page).
-- [Aton](https://pablogila.github.io/ATON). Python package with powerful and comprehensive tools for cutting-edge materials research, focused on (but not limited to) neutron science. It provides a range of spectral analysis tools and physico-chemical constants. It also also allows you to easily create, edit and analyse all kinds of text files, with a special focus on *ab-initio* calculations.
+- [ATON](https://pablogila.github.io/ATON). Python package with powerful and comprehensive tools for cutting-edge materials research, focused on (but not limited to) neutron science. It provides a range of spectral analysis tools and physico-chemical constants. It also also allows you to easily create, edit and analyse all kinds of text files, with a special focus on *ab-initio* calculations.
 - [PlantillaLatex](https://github.com/pablogila/PlantillaLatex). LaTeX template, with info and description of useful commands.
 
 ## Contact
