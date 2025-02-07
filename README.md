@@ -52,7 +52,7 @@ Useful tools and resources for your scientific research.
 
 ## LLM tools
 
-> **Warning:** AI should not replace your own intelligence. It is just text completion. It may be useful for debugging code, for example, but *you* must be the one designing the code, otherwise it will create stupid routines that lead nowhere, etc. Stochastic parrots raise important social and environmental challenges, and you should use them with care (https://doi.org/10.1145/3442188.3445922, https://dx.doi.org/10.2139/ssrn.4678265).
+> **Warning:** AI should not replace your own intelligence. It is just text completion. It may be useful for debugging code, for example, but *you* must be the one designing the code, otherwise it will create stupid routines that lead nowhere, etc. Stochastic parrots raise important social and environmental challenges, and you should use them with care ([doi.org/10.1145/3442188.3445922](https://doi.org/10.1145/3442188.3445922), [doi.org/10.2139/ssrn.4678265](https://doi.org/10.2139/ssrn.4678265)).
 
 - [Github Copilot](https://github.com/features/copilot). VSCode plugin that helps you write code, free with the university account. It also adds a chat window to get coding insights.
 - [Elicit](https://elicit.org/). Ask a Question, get summarized results from papers.
