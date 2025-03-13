@@ -16,6 +16,7 @@ Useful tools and resources for your scientific research.
 - [Detextify](https://detexify.kirelabs.org/classify.html). Find that weird LaTeX symbol.
 - [Tables Generator](https://www.tablesgenerator.com/). Create tables in different formats: LaTeX, markdown...
 - [Draw.io](https://www.drawio.com/). Create nice diagrams and flowcharts.
+- [TeX Live](https://www.tug.org/texlive/) + [VSCode](https://code.visualstudio.com/) with LaTeX Workshop extension, for local LaTeX edition. Install TeX Live on Linux as `sudo apt install texlive-full`.
 
 ## File managing tools
 
@@ -23,27 +24,34 @@ Useful tools and resources for your scientific research.
 - [FreeFileSync](https://freefilesync.org/). Sync backups of entire folders with the click of a button.
 - [TorrentTrackers](TorrentTrackers.md). Selection of nice torrent trackers, to share big files such as large computational outputs.
 
-## Solid-state physics software
-
-- [QuantumESPRESSO](QuantumESPRESSO.md) resources
-- [CASTEP](CASTEP.md) resources
-- [ASE](ASE.md) resources
-- [cif2cell](cif2cell.md) resources
-- Wikipedia's [DFT](https://en.wikipedia.org/wiki/Density_functional_theory) software comparison: [List of quantum chemistry and solid-state physics software](https://en.wikipedia.org/wiki/List_of_quantum_chemistry_and_solid-state_physics_software#Quantum_chemistry_and_solid-state_physics_characteristics)
-- Wikipedia's [Molecular Dynamics](https://en.wikipedia.org/wiki/Molecular_dynamics) software comparison: [Comparison of software for molecular mechanics modeling](https://en.wikipedia.org/wiki/Comparison_of_software_for_molecular_mechanics_modeling)
-
-## Databases
-
-- [StructuralDB](StructuralDB.md). Comprehensive list of relevant material databases, useful to find structural files to simulate your materials
-
 ## Chemistry tools
 
 - [PTable](https://ptable.com/). Periodic Table
 - [IUPAC Periodic Table of the Elements and Isotopes](https://applets.kcvs.ca/IPTEI/IPTEI.html)
 - [ACS Solvent selection tool](https://www.acs.org/greenchemistry/research-innovation/tools-for-green-chemistry/solvent-tool.html)
 
+## Solid-state physics software
+
+- [ATON](https://pablogila.github.io/ATON). Python package with powerful and comprehensive tools for cutting-edge materials research, focused on (but not limited to) neutron science. It provides a range of spectral analysis tools and physico-chemical constants. It also also allows you to easily create, edit and analyse all kinds of text files, with a special focus on *ab-initio* calculations.
+- [QuantumESPRESSO](QuantumESPRESSO.md) resources
+- [CASTEP](CASTEP.md) resources
+- [ASE](ASE.md) resources
+- [cif2cell](cif2cell.md) resources
+- [StructuralDB](StructuralDB.md). Comprehensive list of relevant material databases, useful to find structural files to simulate your materials.
+- Wikipedia's [DFT](https://en.wikipedia.org/wiki/Density_functional_theory) software comparison: [List of quantum chemistry and solid-state physics software](https://en.wikipedia.org/wiki/List_of_quantum_chemistry_and_solid-state_physics_software#Quantum_chemistry_and_solid-state_physics_characteristics)
+- Wikipedia's [Molecular Dynamics](https://en.wikipedia.org/wiki/Molecular_dynamics) software comparison: [Comparison of software for molecular mechanics modeling](https://en.wikipedia.org/wiki/Comparison_of_software_for_molecular_mechanics_modeling)
+
+## Neutron science
+
+- [E-learning neutron scattering with exercises](https://e-learning.pan-training.eu/wiki/Main_Page) based on Kim Lefmann's notes.
+- [ESS-DMSC data pipeline tutorials](https://ess-dmsc-dram.github.io/dmsc-school/intro.html), with Python intermediate exercises (NumPy, Pandas, Scipp...) and neutron instrumentation design and simulation with [McStas](https://www.mcstas.org/).
+- [McStas components documentation](https://www2.mcstas.org/download/components/)
+- [McStasScript Python documentation](https://mads-bertelsen.github.io/)
+
 ## Scientific illustrations
 
+- [Inkscape](https://inkscape.org/) for vector graphics and posters, check [Inkscape tutorials](https://www.youtube.com/@LogosByNick/playlists)
+- [Blender](https://www.blender.org/) for 3D modelling, check [Blender tutorials](https://youtube.com/playlist?list=PLjEaoINr3zgEPv5y--4MKpciLaoQYZB1Z)
 - [NIH Bioart](https://bioart.niaid.nih.gov/) CC license
 - [Chemix](https://chemix.org/) !!! Atribution required unless suscribed
 - [BioRender](https://app.biorender.com/) !!! Suscription required for publishing
@@ -66,7 +74,6 @@ Useful tools and resources for your scientific research.
 ## Other GitHub repositories
 
 - [SciTools](https://pablogila.github.io/SciTools/). Links, tutorials and resources for all your scientific endeavours (this page).
-- [ATON](https://pablogila.github.io/ATON). Python package with powerful and comprehensive tools for cutting-edge materials research, focused on (but not limited to) neutron science. It provides a range of spectral analysis tools and physico-chemical constants. It also also allows you to easily create, edit and analyse all kinds of text files, with a special focus on *ab-initio* calculations.
 - [PlantillaLatex](https://github.com/pablogila/PlantillaLatex). LaTeX template, with info and description of useful commands.
 
 ## Contact
@@ -77,4 +84,4 @@ Useful tools and resources for your scientific research.
 
 
 ---
-Last updated on 2025-02-14
+Last updated on 2025-03-13

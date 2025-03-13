@@ -23,3 +23,5 @@ To translate the cell,
 cif2cell TEST.cif -p quantum-espresso --supercell-translation-vector=[k,l,m]
 ```
 
+A similar related tool is [cif2hkl](https://github.com/farhi/cif2hkl)
+

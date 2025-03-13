@@ -3,7 +3,7 @@ Script to update the SciTools repository from my Obsidian notes.
 Uses ATON, https://github.com/pablogila/ATON
 '''
 from aton import txt
-from aton.st import call
+from aton import call
 import time
 
 call.here()
@@ -45,6 +45,7 @@ dict_fix = {
     '[[TorrentTrackers]]'           : '[TorrentTrackers](TorrentTrackers.md)',
     '[[StructuralDB]]'              : '[StructuralDB](StructuralDB.md)',
     '[[Git]]'                       : '[Git](Git.md)',
+    '[[McStas]]'                    : '[McStas](https://www.mcstas.org/)',
     r"{{"                           : r"{\{",
     r"{%"                           : r"{\%",
     '[[Naming conventions#For calculations|naming convention]]' : 'naming convention',
