@@ -20,6 +20,7 @@ dict_files = {
     '/home/pablo/Documents/obsidian/Work ⚛️/Instruments/StructuralDB.md'    : 'StructuralDB.md',
     '/home/pablo/Documents/obsidian/Work ⚛️/Instruments/TorrentTrackers.md' : 'TorrentTrackers.md',
     '/home/pablo/Documents/obsidian/Work ⚛️/Instruments/Git.md'             : 'Git.md',
+    '/home/pablo/Documents/obsidian/Work ⚛️/Instruments/McStas.md'          : 'McStas.md',
 }
 
 # Dict to fix Obsidian wikilinks
@@ -29,12 +30,11 @@ dict_fix = {
     '[[Materials Studio]]'          : 'Materials Studio',
     '[[SLURM]]'                     : 'SLURM',
     '[[Slurm]]'                     : 'Slurm',
-    '[[Atlas & Hyperion]]'          : '[Atlas & Hyperion](https://scc.dipc.org/docs/)',
+    '[[Hyperion]]'                  : '[Hyperion](https://scc.dipc.org/docs/)',
     '[[SCARF]]'                     : '[SCARF](https://www.scarf.rl.ac.uk/index.html)',
     '[[VESTA]]'                     : '[VESTA](https://jp-minerals.org/vesta/en/)',
     '[[Phonopy]]'                   : '[Phonopy](https://phonopy.github.io/phonopy/)',
     '[[CP2K]]'                      : '[CP2K](https://www.cp2k.org/about)',
-    '[[Quantum ESPRESSO]]'          : '[Quantum ESPRESSO](Quantum ESPRESSO.md)',
     '[[QuantumESPRESSO]]'           : '[QuantumESPRESSO](QuantumESPRESSO.md)',
     '[[CASTEP]]'                    : '[CASTEP](CASTEP.md)',
     '[[cif2cell]]'                  : '[cif2cell](cif2cell.md)',
@@ -45,10 +45,12 @@ dict_fix = {
     '[[TorrentTrackers]]'           : '[TorrentTrackers](TorrentTrackers.md)',
     '[[StructuralDB]]'              : '[StructuralDB](StructuralDB.md)',
     '[[Git]]'                       : '[Git](Git.md)',
-    '[[McStas]]'                    : '[McStas](https://www.mcstas.org/)',
+    '[[McStas]]'                    : '[McStas](McStas.md)',
+    '[[Vitess]]'                    : '[Vitess](https://vitess.fz-juelich.de/)',
     r"{{"                           : r"{\{",
     r"{%"                           : r"{\%",
     '[[Naming conventions#For calculations|naming convention]]' : 'naming convention',
+    ' ([[Meet 25-03-07-09.00 McStasScript]])' : '',
 }
 
 # Copy and correct Obsidian notes

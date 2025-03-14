@@ -1,6 +1,6 @@
 # Quantum ESPRESSO
 
-[Quantum ESPRESSO (web)](https://www.quantum-espresso.org/) is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on [DFT](https://en.wikipedia.org/wiki/Density_functional_theory), [Molecular Dynamics](https://en.wikipedia.org/wiki/Molecular_dynamics), plane waves, and pseudopotentials. It is usually preinstalled in superclusters like [Atlas & Hyperion](https://scc.dipc.org/docs/).
+[Quantum ESPRESSO (web)](https://www.quantum-espresso.org/) is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on [DFT](https://en.wikipedia.org/wiki/Density_functional_theory), [Molecular Dynamics](https://en.wikipedia.org/wiki/Molecular_dynamics), plane waves, and pseudopotentials. It is usually preinstalled in superclusters like [Hyperion](https://scc.dipc.org/docs/).
 
 ## Input description
 
@@ -11,7 +11,7 @@ It is useful to follow a custom naming convention for the calculations, as:
 eg.  
 `MAPI-ND-5_240729a_relax_test`  
 
-Inputs for *PWsfc pw.x* are `filename.in`, which is usually called from a Slurm file with MPI paralellization. For example, for a geometry optimization calculation we would run (source: [Atlas & Hyperion](https://scc.dipc.org/docs/) HPC [wiki on QE](https://scc.dipc.org/docs/software/applications/quantum-espresso/)):
+Inputs for *PWsfc pw.x* are `filename.in`, which is usually called from a Slurm file with MPI paralellization. For example, for a geometry optimization calculation we would run (source: [Hyperion](https://scc.dipc.org/docs/) HPC [wiki on QE](https://scc.dipc.org/docs/software/applications/quantum-espresso/)):
 ```
 
 srun --cpu_bind=cores pw.x input.in > output.out

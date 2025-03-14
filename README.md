@@ -33,20 +33,14 @@ Useful tools and resources for your scientific research.
 ## Solid-state physics software
 
 - [ATON](https://pablogila.github.io/ATON). Python package with powerful and comprehensive tools for cutting-edge materials research, focused on (but not limited to) neutron science. It provides a range of spectral analysis tools and physico-chemical constants. It also also allows you to easily create, edit and analyse all kinds of text files, with a special focus on *ab-initio* calculations.
-- [QuantumESPRESSO](QuantumESPRESSO.md) resources
-- [CASTEP](CASTEP.md) resources
-- [ASE](ASE.md) resources
-- [cif2cell](cif2cell.md) resources
+- [QuantumESPRESSO](QuantumESPRESSO.md) (DFT)
+- [CASTEP](CASTEP.md) (DFT)
+- [McStas](McStas.md) Monte Carlo simulations of neutron instrumentation
+- [ASE](ASE.md) Atomic Simulation Environment for Python
+- [cif2cell](cif2cell.md) tool for structural file conversion
 - [StructuralDB](StructuralDB.md). Comprehensive list of relevant material databases, useful to find structural files to simulate your materials.
 - Wikipedia's [DFT](https://en.wikipedia.org/wiki/Density_functional_theory) software comparison: [List of quantum chemistry and solid-state physics software](https://en.wikipedia.org/wiki/List_of_quantum_chemistry_and_solid-state_physics_software#Quantum_chemistry_and_solid-state_physics_characteristics)
 - Wikipedia's [Molecular Dynamics](https://en.wikipedia.org/wiki/Molecular_dynamics) software comparison: [Comparison of software for molecular mechanics modeling](https://en.wikipedia.org/wiki/Comparison_of_software_for_molecular_mechanics_modeling)
-
-## Neutron science
-
-- [E-learning neutron scattering with exercises](https://e-learning.pan-training.eu/wiki/Main_Page) based on Kim Lefmann's notes.
-- [ESS-DMSC data pipeline tutorials](https://ess-dmsc-dram.github.io/dmsc-school/intro.html), with Python intermediate exercises (NumPy, Pandas, Scipp...) and neutron instrumentation design and simulation with [McStas](https://www.mcstas.org/).
-- [McStas components documentation](https://www2.mcstas.org/download/components/)
-- [McStasScript Python documentation](https://mads-bertelsen.github.io/)
 
 ## Scientific illustrations
 
@@ -84,4 +78,4 @@ Useful tools and resources for your scientific research.
 
 
 ---
-Last updated on 2025-03-13
+Last updated on 2025-03-14
