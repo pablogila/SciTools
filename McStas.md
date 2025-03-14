@@ -25,14 +25,14 @@ mamba install mcstas
 To use McStas in a cluster like [Hyperion](https://scc.dipc.org/docs/), it should be installed in the /scratch folder:
 ```bash
 module purge
-module load Miniforge3
+module load Python
 conda create --prefix /scratch/gila/.conda/envs/mcstas
 conda activate /scratch/gila/.conda/envs/mcstas
 conda install mamba --channel conda-forge
 mamba install mcstas
 ```
 
-Once it is installed in the cluster, it can be accessed as
+Once installed in the cluster, it can be accessed anytime as
 ```bash
 module load Python
 conda activate /scratch/gila/.conda/envs/mcstas
