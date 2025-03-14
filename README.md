@@ -74,7 +74,7 @@ Useful tools and resources for your scientific research.
 
 > Pablo Gila-Herranz, pgila001@ikasle.ehu.eus  
 > PhD Student @ Quantum Beams & Computation for Sustainable Materials Group  
-> Materials Physics Center CFM-MPC (CSIC-UPV)  
+> Materials Physics Center (CFM-MPC), CSIC-UPV/EHU
 
 
 ---
