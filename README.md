@@ -16,7 +16,7 @@ Useful tools and resources for your scientific research.
 - [Detextify](https://detexify.kirelabs.org/classify.html). Find that weird LaTeX symbol.
 - [Tables Generator](https://www.tablesgenerator.com/). Create tables in different formats: LaTeX, markdown...
 - [Draw.io](https://www.drawio.com/). Create nice diagrams and flowcharts.
-- [TeX Live](https://www.tug.org/texlive/) + [VSCode](https://code.visualstudio.com/) with LaTeX Workshop extension, for local LaTeX edition. Install TeX Live on Linux as `sudo apt install texlive-full`.
+- [TeX Live](https://www.tug.org/texlive/) + [VSCode](https://code.visualstudio.com/) with LaTeX Workshop extension, for local LaTeX edition. Install on Linux as `sudo apt install texlive-full`.
 
 ## File managing tools
 
@@ -78,4 +78,4 @@ Useful tools and resources for your scientific research.
 
 
 ---
-Last updated on 2025-03-14
+Last updated on 2025-03-15
