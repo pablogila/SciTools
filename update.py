@@ -60,5 +60,6 @@ txt.edit.replace('Zotero.md', '`{%', '`{% raw %}{%')
 txt.edit.replace('Zotero.md', '%1}`', '%1}{% endraw %}`')
 txt.edit.replace('Zotero.md', '`{{', '`{% raw %}{{')
 txt.edit.replace('Zotero.md', '}}`', '}}{% endraw %}`')
+
 call.git()
 
