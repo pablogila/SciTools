@@ -32,7 +32,7 @@ Useful tools and resources for your scientific research.
 
 ## Solid-state physics software
 
-- [ATON](https://pablogila.github.io/ATON). Python package with powerful and comprehensive tools for cutting-edge materials research, focused on (but not limited to) neutron science. It provides a range of spectral analysis tools and physico-chemical constants. It also also allows you to easily create, edit and analyse all kinds of text files, with a special focus on *ab-initio* calculations.
+- [ATON](https://pablogila.github.io/aton). Python package with powerful and comprehensive tools for cutting-edge materials research, focused on (but not limited to) neutron science. It provides a range of spectral analysis tools and physico-chemical constants. It also also allows you to easily create, edit and analyse all kinds of text files, with a special focus on *ab-initio* calculations.
 - [QuantumESPRESSO](QuantumESPRESSO.md) (DFT)
 - [CASTEP](CASTEP.md) (DFT)
 - [McStas](McStas.md) Monte Carlo simulations of neutron instrumentation
