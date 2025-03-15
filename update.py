@@ -59,8 +59,8 @@ for original, final in dict_files.items():
 txt.edit.insert_at('README.md', f'\n---\nLast updated on {date}',  -1)
 # Correct Zotero notes
 zotero_warning = r"(Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  "
-txt.edit.insert_under('Zotero.md', zotero_warning, r"{\%")
-txt.edit.insert_under('Zotero.md', zotero_warning, r"{\{")
+txt.edit.insert_under('Zotero.md', r"{\%", zotero_warning)
+txt.edit.insert_under('Zotero.md', r"{\{", zotero_warning)
 # Publish to Git repo
 call.git()
 
