@@ -60,8 +60,8 @@ txt.edit.insert_at('README.md', f'\n---\nLast updated on {date}',  -1)
 # Correct Zotero notes
 txt.edit.replace('Zotero.md', '`{{', '`{% raw %}{{')
 txt.edit.replace('Zotero.md', '}}`', '}}{% endraw %}`')
-txt.edit.replace('Zotero.md', '`{%', '`{% raw %}{%')
-txt.edit.replace('Zotero.md', '%}`', '%}{% endraw %}`')
+#txt.edit.replace('Zotero.md', '`{%', '`{% raw %}{%')
+#txt.edit.replace('Zotero.md', '%}`', '%}{% endraw %}`')
 #zotero_warning = r"> (Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  "
 #txt.edit.insert_under('Zotero.md', r"{\%", zotero_warning)
 #txt.edit.insert_under('Zotero.md', r"{\{", zotero_warning)
