@@ -52,6 +52,6 @@ To fix that, simply go to `Edit, Preferences, Advanced, Config Editor` and click
 ```
 {"1": {"field": "title", "operations":[{"function": "replace", "regex": "<sub>", "replacement":"", "flags":"g"},{"function": "replace", "regex": "</sub>", "replacement":"", "flags":"g"}]}}
 ```
-You have now configured a custom User Wildcard. You can now extract the title without the HTML tags, by going to `Tools, ZotFile Preferences, Renaming Rules` and setting it to `{%1}`.  
-For example, to rename all PDFs as `CitationKey - Title`, you should configure ZotFile renaming rules as `{%b} - {%1}`.  
+You have now configured a custom User Wildcard. You can now extract the title without the HTML tags, by going to `Tools, ZotFile Preferences, Renaming Rules` and setting it to `{% raw %}{%1}{% endraw %}`.  
+For example, to rename all PDFs as `CitationKey - Title`, you should configure ZotFile renaming rules as `{% raw %}{%b} - {%1}{% endraw %}`.  
 
