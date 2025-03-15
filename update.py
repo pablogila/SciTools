@@ -47,8 +47,6 @@ dict_fix = {
     '[[Git]]'                       : '[Git](Git.md)',
     '[[McStas]]'                    : '[McStas](McStas.md)',
     '[[Vitess]]'                    : '[Vitess](https://vitess.fz-juelich.de/)',
-#    r"{{"                           : r"{\{",
-#    r"{%"                           : r"{\%",
     '[[Naming conventions#For calculations|naming convention]]' : 'naming convention',
     ' ([[Meet 25-03-07-09.00 McStasScript]])' : '',
 }
@@ -62,9 +60,5 @@ txt.edit.replace('Zotero.md', '`{%', '`{% raw %}{%')
 txt.edit.replace('Zotero.md', '%1}`', '%1}{% endraw %}`')
 txt.edit.replace('Zotero.md', '`{{', '`{% raw %}{{')
 txt.edit.replace('Zotero.md', '}}`', '}}{% endraw %}`')
-#zotero_warning = r"> (Without the `\` symbol; it is only needed for the stupid GitHub pages to load)  "
-#txt.edit.insert_under('Zotero.md', r"{\%", zotero_warning)
-#txt.edit.insert_under('Zotero.md', r"{\{", zotero_warning)
-# Publish to Git repo
 call.git()
 
