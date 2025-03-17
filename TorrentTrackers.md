@@ -47,7 +47,7 @@ Some of these trackers are explained at:
 - [opentracker.io](https://opentracker.io/)
 - [stealth.si](https://stealth.si/)
 
-We can also use private trackers (without indexing, to share only with a friend etc). The problem is, these are not reliable.
+We can also use private trackers (without indexing, to share only with a friend etc). The problem is, these are not always reliable.
 - [privtracker.com](https://privtracker.com/)
 ```
 https://privtracker.com/RANDOMSTRING/announce
