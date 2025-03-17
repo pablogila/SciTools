@@ -48,10 +48,3 @@ conda activate /scratch/gila/.conda/envs/mcstas
 - [McStasScript-notebooks](https://github.com/PaNOSC-ViNYL/McStasScript-notebooks). Tutorial with McStasScript quizzes
 - [Neutron scattering and McStas learning exercises](https://e-learning.pan-training.eu/wiki/Main_Page). Following Kim Leffman's notes
 
-
-## References
-- #bertelsen2017 - Software for simulation and design of neutron scattering instrumentation
-- #mcstas1
-- #mcstas2
-- #pavlov2022 - Compact Neutron Sources for Condensed-Matter Physics in Russia and Abroad: State of Affairs and Prospects
-
