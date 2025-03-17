@@ -115,7 +115,7 @@ Quantum ESPRESSO uses pseudos in UPF format, and can be obtained from:
 - [Quantum Espresso Walkthrough](https://courses.engr.illinois.edu/mse404ela/sp2021/6.DFT-walkthrough.html)
 
 ## Useful tools
-- [ATON](https://pablogila.github.io/ATON) Contains a Python interface for QE calculations
+- [ATON](https://pablogila.github.io/aton) Contains a Python interface for QE calculations
 - [cif2cell](cif2cell.md)
 - [MaterialsCloud - Quantum ESPRESSO PWscf input generator and structure visualizer](https://qeinputgenerator.materialscloud.io/)
 - [MaterialsCloud - Interactive phonon visualizer](https://interactivephonon.materialscloud.io/)
