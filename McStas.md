@@ -3,14 +3,10 @@
 ## Overview
 
 [McStas (web)](https://www.mcstas.org/) is a general tool for **simulating neutron scattering instruments**. It is based on a compiler that reads a high-level specification language defining the instrument to be simulated and produces C code that performs the Monte Carlo Simulation. This makes it very fast, typical figures are 500000 neutron histories per second on a fast PC.
-There is a [McStasScript](https://mads-bertelsen.github.io/) Python API that makes things easier.
 
-McStas comes with a comprehensive library of well-tested components that include most standard elements of neutron scattering instruments. New components are constantly introduced by the community. Check the available components in the [McStas components documentation](https://www2.mcstas.org/download/components/).
-There are also [shared useful files for McStas](https://www.mcstas.org/download/share/) which can be used to simulate ISIS or ESS instruments.
+It is common to test calculations in more than one software to check their validity; an alternative to McStas is [Vitess](https://vitess.fz-juelich.de/).
 
-It is common to test calculations in more than one software to check their validity; an alternative to McStas is [Vitess](https://vitess.fz-juelich.de/). 
-
-McStas shares codebase with its X-Ray analogous, [McXtrace](https://www.mcxtrace.org/), which has a similar syntax.
+McStas shares codebase with its X-Ray analogous, [McXtrace](https://www.mcxtrace.org/), with a similar syntax.
 
 ## Installation
 
@@ -41,6 +37,13 @@ Once installed, it can be accessed anytime as
 module load Python
 conda activate /scratch/gila/.conda/envs/mcstas
 ```
+
+## Components
+
+McStas comes with a comprehensive library of well-tested components that include most standard elements of neutron scattering instruments. New components are constantly created by the community.
+- [McStas components documentation](https://www2.mcstas.org/download/components/)
+- [McStasScript](https://mads-bertelsen.github.io/) Python API to make things easier
+- [Shared useful files for McStas](https://www.mcstas.org/download/share/) used to simulate ISIS or ESS instruments
 
 ## Tutorials
 - [ESS DMSM Summer School](https://ess-dmsc-dram.github.io/dmsc-school/intro.html). Great tutorial with the ESS workflow, from McStas calculations to data analysis with Scipp
