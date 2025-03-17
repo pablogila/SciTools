@@ -14,6 +14,8 @@ McStas shares codebase with its X-Ray analogous, [McXtrace](https://www.mcxtrace
 
 ## Installation
 
+### On PC
+
 It is recommended to [install McStas](https://github.com/mccode-dev/McCode/blob/main/INSTALL-McStas/conda/README.md#if-you-dont-have-a-conda-already) with [miniforge](https://conda-forge.org/download/).
 Once miniforge is installed, create a conda environment and install McStas:
 ```bash
@@ -22,9 +24,11 @@ conda activate mcstas
 mamba install mcstas
 ```
 
-To use McStas in a cluster like [Hyperion](https://scc.dipc.org/docs/), it should be installed in the /scratch folder:
+### On HPC clusters
+
+To use McStas in HPC clusters like [Hyperion](https://scc.dipc.org/docs/), it should be installed in the /scratch folder.
+Replacing `gila` by your own username,
 ```bash
-module purge
 module load Python
 conda create --prefix /scratch/gila/.conda/envs/mcstas
 conda activate /scratch/gila/.conda/envs/mcstas
@@ -32,7 +36,7 @@ conda install mamba --channel conda-forge
 mamba install mcstas
 ```
 
-Once installed in the cluster, it can be accessed anytime as
+Once installed, it can be accessed anytime as
 ```bash
 module load Python
 conda activate /scratch/gila/.conda/envs/mcstas
