@@ -42,8 +42,15 @@ conda activate /scratch/gila/.conda/envs/mcstas
 
 McStas comes with a comprehensive library of well-tested components that include most standard elements of neutron scattering instruments. New components are constantly created by the community.
 - [McStas components documentation](https://www2.mcstas.org/download/components/)
-- [McStasScript](https://mads-bertelsen.github.io/) Python API to make things easier
 - [Shared useful files for McStas](https://www.mcstas.org/download/share/) used to simulate ISIS or ESS instruments
+
+## Workflow
+
+The ESS workflow using McStas is presented in the [ESS DMSM Summer School](https://ess-dmsc-dram.github.io/dmsc-school/intro.html).
+Neutron sources can be imported as MCPL files from other MC codes, such as [PHITS](https://phits.jaea.go.jp/).
+Then we can use the McStasScript Python API to create the instruments easily.
+- [McStasScript](https://mads-bertelsen.github.io/) Python API to make things easier
+- [MCPL](https://mctools.github.io/mcpl/) file format to transfer data between different Monte Carlo applications
 
 ## Tutorials
 - [ESS DMSM Summer School](https://ess-dmsc-dram.github.io/dmsc-school/intro.html). Great tutorial with the ESS workflow, from McStas calculations to data analysis with Scipp

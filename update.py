@@ -47,6 +47,7 @@ dict_fix = {
     '[[Git]]'                       : '[Git](Git.md)',
     '[[McStas]]'                    : '[McStas](McStas.md)',
     '[[Vitess]]'                    : '[Vitess](https://vitess.fz-juelich.de/)',
+    '[[PHITS]]'                     : '[PHITS](https://phits.jaea.go.jp/)',
     '[[Naming conventions#For calculations|naming convention]]' : 'naming convention',
     ' ([[Meet 25-03-07-09.00 McStasScript]])' : '',
 }
