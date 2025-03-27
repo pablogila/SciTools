@@ -40,20 +40,54 @@ conda activate /scratch/gila/.conda/envs/mcstas
 
 ## Components
 
-McStas comes with a comprehensive library of well-tested components that include most standard elements of neutron scattering instruments. New components are constantly created by the community.
+McStas comes with a comprehensive library of well-tested components that include most standard elements of neutron scattering instruments. New components are constantly created by the community. Neutron sources can also be imported from other programs.
 - [McStas components documentation](https://www2.mcstas.org/download/components/)
 - [Shared useful files for McStas](https://www.mcstas.org/download/share/) used to simulate ISIS or ESS instruments
+- [MCPL](https://mctools.github.io/mcpl/) file format to transfer data between different Monte Carlo applications, for example to use sources from [PHITS](https://phits.jaea.go.jp/) calculations.
 
-## Workflow
+## McStasScript
 
-The ESS workflow using McStas is presented in the [ESS DMSM Summer School](https://ess-dmsc-dram.github.io/dmsc-school/intro.html).
-Neutron sources can be imported as MCPL files from other MC codes, such as [PHITS](https://phits.jaea.go.jp/).
-Then we can use the McStasScript Python API to create the instruments easily.
-- [McStasScript](https://mads-bertelsen.github.io/) Python API to make things easier
-- [MCPL](https://mctools.github.io/mcpl/) file format to transfer data between different Monte Carlo applications
+[McStasScript](https://mads-bertelsen.github.io/) is the McStas Python API, really useful to automatize calculations and to make things easier. The ESS workflow using McStas is presented in the [ESS DMSC Summer School](https://ess-dmsc-dram.github.io/dmsc-school/intro.html).
+
+McStasScript provides really useful help commands that can guide you when designing instruments in Jupyter Lab:
+```python
+import mcstasscript as ms
+instrument = ms.McStas_instr("MyInstrument")
+
+instrument.available_components()
+# Shows all available component categories
+
+instrument.available_components("sources")
+# All available components from a specific category
+
+instrument.component_help("Source_pulsed")
+# Help for a specific component
+```
+
+You can also see the parameters of a component that you already placed,
+```python
+source = instrument.add_component("MySource", "Source_pulsed")
+source.show_parameters()
+# Shows current parameters used in the component
+
+source.set_parameters(xwidth=0.1, ...)
+```
+
+You should configure the instrument settings before running the simulation:
+```python
+instrument.settings(ncount=1e6, mpi=4, ...)
+instrument.show_settings()
+# Shows current instrument settings
+```
+
+Finally, run the simulation and plot the data from the monitors that you placed on the instrument:
+```python
+data = instrument.backengine()
+ms.make_plot(data)
+```
 
 ## Tutorials
-- [ESS DMSM Summer School](https://ess-dmsc-dram.github.io/dmsc-school/intro.html). Great tutorial with the ESS workflow, from McStas calculations to data analysis with Scipp
+- [ESS DMSC Summer School](https://ess-dmsc-dram.github.io/dmsc-school/intro.html). Great tutorial with the ESS workflow, from McStas calculations to data analysis with Scipp
 - [McStas and McXtrace schools](https://github.com/McStasMcXtrace/Schools). Repo with learning material from past schools
 - [McStasScript-notebooks](https://github.com/PaNOSC-ViNYL/McStasScript-notebooks). Tutorial with McStasScript quizzes
 - [Neutron scattering and McStas learning exercises](https://e-learning.pan-training.eu/wiki/Main_Page). Following Kim Leffman's notes
