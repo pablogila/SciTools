@@ -2,7 +2,7 @@
 
 ## Overview
 
-[McStas (web)](https://www.mcstas.org/) is a general tool for **simulating neutron scattering instruments**. It is based on a compiler that reads a high-level specification language defining the instrument to be simulated and produces C code that performs the Monte Carlo Simulation. This makes it very fast, typical figures are 500000 neutron histories per second on a fast PC.
+[McStas (web)](https://www.mcstas.org/), [(Manual)](https://www.mcstas.org/documentation/manual/) is a general tool for **simulating neutron scattering instruments**. It is based on a compiler that reads a high-level specification language defining the instrument to be simulated and produces C code that performs the Monte Carlo Simulation. This makes it very fast, typical figures are 500000 neutron histories per second on a fast PC.
 
 It is common to test calculations in more than one software to check their validity; an alternative to McStas is [Vitess](https://vitess.fz-juelich.de/).
 
@@ -42,6 +42,7 @@ conda activate /scratch/gila/.conda/envs/mcstas
 
 McStas comes with a comprehensive library of well-tested components that include most standard elements of neutron scattering instruments. New components are constantly created by the community. Neutron sources can also be imported from other programs.
 - [McStas components documentation](https://www2.mcstas.org/download/components/)
+- [McStas Manual](https://www.mcstas.org/documentation/manual/) has a components manual
 - [Shared useful files for McStas](https://www.mcstas.org/download/share/) used to simulate ISIS or ESS instruments
 - [MCPL](https://mctools.github.io/mcpl/) file format to transfer data between different Monte Carlo applications, for example to use sources from [PHITS](https://phits.jaea.go.jp/) calculations.
 
@@ -60,13 +61,13 @@ instrument.available_components()
 instrument.available_components("sources")
 # All available components from a specific category
 
-instrument.component_help("Source_pulsed")
+instrument.component_help("Source_custom")
 # Help for a specific component
 ```
 
 You can also see the parameters of a component that you already placed,
 ```python
-source = instrument.add_component("MySource", "Source_pulsed")
+source = instrument.add_component("MySource", "Source_custom")
 source.show_parameters()
 # Shows current parameters used in the component
 
@@ -75,7 +76,7 @@ source.set_parameters(xwidth=0.1, ...)
 
 You should configure the instrument settings before running the simulation:
 ```python
-instrument.settings(ncount=1e6, mpi=4, ...)
+instrument.settings(ncount=1e7, mpi=4, ...)
 instrument.show_settings()
 # Shows current instrument settings
 ```
