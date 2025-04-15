@@ -68,6 +68,8 @@ instrument.component_help("Source_custom")
 You can also see the parameters of a component that you already placed,
 ```python
 source = instrument.add_component("MySource", "Source_custom")
+monitor = instrument.add_component("monitor", "L_monitor")
+
 source.show_parameters()
 # Shows current parameters used in the component
 
@@ -87,9 +89,33 @@ data = instrument.backengine()
 ms.make_plot(data)
 ```
 
+The handy functions `ms.make_plot()` and `ms.make_sub_plot()` have *some* [customization options](https://mads-bertelsen.github.io/user_guide/plotting.html), but if you want more control you can just plot the data with Matplotlib:
+```python
+data_L = ms.name_search("L_monitor", data)
+wavelength = data_L.xaxis
+intensity = data_L.Intensity
+plt.plot(wavelength, intensity)
+plt.show()
+```
+
+## Beware of the binning
+
+Since we mostly measure histograms of neutron counts per wavelength or energy range, the binning will be very important to properly normalise the data. This implies not only the number of bins, but also the range of wavelengths or energies that we are measuring.
+A proper normalisation of the intensities is performed by dividing the intensity by the size of the individual bin. This is the same as multiplying by the number of bins and dividing by the whole measuring range. Additionally, we should also normalise by the detector area, in cm units.
+```python
+measurement = ms.name_search("L_monitor", data)
+I = measurement.Intensity * binning / (Lmax-Lmin) / (xw*100 * yh*100)
+```
+
+If we normalise the intensity from a neutron *energy* measurement (E_monitor) by the size of the energy bin, the intensity will be in units of energy. On the other side, If we normalise the intensity of a *wavelength* measurement (L_monitor) by the size of the wavelength bin, and *then* we convert the x axis to energy, it will be in units of *lethargy*. Remember the De Broglie conversion from neutron wavelength to energy,
+$$E = \frac{h}{2m\lambda^2}$$
+$$E[meV] = \frac{81.82}{(\lambda[AA])^2}$$
+$$\lambda[AA] = \sqrt{\frac{81.82}{E[meV]}}$$
+
 ## Tutorials
 - [ESS DMSC Summer School](https://ess-dmsc-dram.github.io/dmsc-school/intro.html). Great tutorial with the ESS workflow, from McStas calculations to data analysis with Scipp
 - [McStas and McXtrace schools](https://github.com/McStasMcXtrace/Schools). Repo with learning material from past schools
 - [McStasScript-notebooks](https://github.com/PaNOSC-ViNYL/McStasScript-notebooks). Tutorial with McStasScript quizzes
 - [Neutron scattering and McStas learning exercises](https://e-learning.pan-training.eu/wiki/Main_Page). Following Kim Leffman's notes
+- [McStas and Mantid integration](https://github.com/mccode-dev/McCode/wiki/McStas-and-Mantid)
 
