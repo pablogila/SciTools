@@ -7,7 +7,7 @@ Useful tools and resources for your scientific research.
 - [Zotero](Zotero.md). Reference manager. Get all your papers in one place
 - [Inciteful](https://inciteful.xyz/). Paste a DOI and find related papers, using cross citations
 - [Research Rabbit](https://researchrabbitapp.com/). Upload a BibTeX or connect to your Zotero account, and find papers related to your collection
-- [Obsidian](https://obsidian.md/). Note-taking app in markdown format, with cross-references. (Note that this page was creted with Obsidian!)
+- [Obsidian](https://obsidian.md/). Note-taking app in markdown format, with cross-references. (Note that this page was created with Obsidian!)
 
 ## Documents and graphs
 
@@ -46,9 +46,10 @@ Useful tools and resources for your scientific research.
 
 - [Inkscape](https://inkscape.org/) for vector graphics and posters, check [Inkscape tutorials](https://www.youtube.com/@LogosByNick/playlists)
 - [Blender](https://www.blender.org/) for 3D modelling, check [Blender tutorials](https://youtube.com/playlist?list=PLjEaoINr3zgEPv5y--4MKpciLaoQYZB1Z)
+- [FreeCAD](https://www.freecad.org) Free and Open Source CAD for 3D parametric modeling
 - [NIH Bioart](https://bioart.niaid.nih.gov/) CC license
-- [Chemix](https://chemix.org/) !!! Atribution required unless suscribed
-- [BioRender](https://app.biorender.com/) !!! Suscription required for publishing
+- [Chemix](https://chemix.org/) !!! Attribution required unless subscribed
+- [BioRender](https://app.biorender.com/) !!! Subscription required for publishing
 - [SciDraw](https://scidraw.io/) !!! CC-BY
 - [Bioicons](https://bioicons.com/) !!! Check licensing
 
@@ -63,10 +64,10 @@ Useful tools and resources for your scientific research.
 - [Meetily](https://meetily.zackriya.com/). Meeting assistant
 
 **Online** (*a.k.a.* giving away for free your personal data and your soul)
-- [Github Copilot](https://github.com/features/copilot). VSCode plugin that helps you write code, free with the university account. It also adds a chat window to get coding insights
+- [HuggingChat](https://huggingface.co/chat/). Open source LLMs
+- [GitHub Copilot](https://github.com/features/copilot). VSCode plugin that helps you write code, free with the university account. It also adds a chat window to get coding insights
 - [Elicit](https://elicit.org/). Ask a Question, get summarized results from papers
 - [Deepl Write](https://www.deepl.com/en/write). Check your grammar or translate, really useful even for scientific texts
-- [HuggingChat](https://huggingface.co/chat/). Open source LLMs
 - [Microsoft Copilot](https://copilot.microsoft.com/)
 - [Google Gemini](https://gemini.google.com/app)
 - [ChatGPT](https://chatgpt.com/)
@@ -85,4 +86,4 @@ Useful tools and resources for your scientific research.
 
 
 ---
-Last updated on 2025-04-15
+Last updated on 2025-05-05

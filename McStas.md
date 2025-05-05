@@ -101,10 +101,10 @@ plt.show()
 ## Beware of the binning
 
 Since we mostly measure histograms of neutron counts per wavelength or energy range, the binning will be very important to properly normalise the data. This implies not only the number of bins, but also the range of wavelengths or energies that we are measuring.
-A proper normalisation of the intensities is performed by dividing the intensity by the size of the individual bin. This is the same as multiplying by the number of bins and dividing by the whole measuring range. Additionally, we should also normalise by the detector area, in cm units.
+A proper normalisation of the intensities is performed by dividing the intensity by the size of the individual bin. This is the same as multiplying by the number of bins and dividing by the whole measuring range. Additionally, we should also normalise by the detector area, in cm² units. Also, if we want to plot per μA, and our source was e.g. 100 μA, we should consider it as well.
 ```python
 measurement = ms.name_search("L_monitor", data)
-I = measurement.Intensity * binning / (Lmax-Lmin) / (xw*100 * yh*100)
+I = measurement.Intensity * binning / (Lmax-Lmin) / (xw*100 * yh*100) / 100
 ```
 
 If we normalise the intensity from a neutron *energy* measurement (E_monitor) by the size of the energy bin, the intensity will be in units of energy. On the other side, If we normalise the intensity of a *wavelength* measurement (L_monitor) by the size of the wavelength bin, and *then* we convert the x axis to energy, it will be in units of *lethargy*. Remember the De Broglie conversion from neutron wavelength to energy,
