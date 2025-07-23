@@ -13,7 +13,6 @@ eg.
 
 Inputs for *PWsfc pw.x* are `filename.in`, which is usually called from a Slurm file with MPI paralellization. For example, for a geometry optimization calculation we would run (source: [Hyperion](https://scc.dipc.org/docs/) HPC [wiki on QE](https://scc.dipc.org/docs/software/applications/quantum-espresso/)):
 ```
-
 srun --cpu_bind=cores pw.x input.in > output.out
 ```
 
@@ -21,7 +20,7 @@ Input values are in atomic units, unless stated otherwise. This means that energ
 
 Note that **energy** is an extensive parameter. Consequently, the thresholds for the energy are also extensive, so these depend on the number of atoms of the system.
 
-In general, it is good practice to write exponentials with double precision, with `d` instead of `e`, as in `conv_thr = 1.47d-12`, to avoid weird numeric errors.
+In general, it is good practice to write exponentials with double precision, with `d` instead of `e`, as in `conv_thr = 1.47d-12`, to avoid weird numeric errors (remember that 1e1=10).
 
 **Isotopes** in the [ATOMIC_SPECIES](https://www.quantum-espresso.org/Doc/INPUT_PW.html#ATOMIC_SPECIES) must start by the actual letter from the species, such as H2; It cannot be D.
 
@@ -45,10 +44,11 @@ For phonons, we will probably need an SCF convergence of `conv_thr=1.0d-10` [or 
 
 In most cases, we reach total energy convergence before the forces converge, so the `etot_conv_thr` [is usually not that important](https://ashour.dev/Practical+DFT/Iterative+Convergence+Criteria+in+DFT+-+VASP+and+Quantum+ESPRESSO#Total+Energy+Convergence+(%60etot_conv_thr%60%2F%60EDIFFG%60%3E0)).
 
-For electronic calculations, a `forc_conv_thr` of about $10^{-4}$ Ry/A is commonly found in the literature. Lower values such as $10^{-7}$ Ry/A [may be necessary](https://ashour.dev/Practical+DFT/Iterative+Convergence+Criteria+in+DFT+-+VASP+and+Quantum+ESPRESSO#Force+Convergence+(%60forc_conv_thr%60%2F%60EDIFFG%60%3C0)) for phonon calculations, which is rarely attainable with the usual BFGS algorithm. [Special algorithms](https://iopscience.iop.org/article/10.1088/1361-648X/aacd79) have been developed for such situations.
-As a rule of thumb, the forces convergence is roughly the square root of the energy convergence, eg. if energy is converged to $10^{-6}$, forces are converged to ~$10^{-3}$. [(source)](https://mattermodeling.stackexchange.com/questions/13046/negative-phonon-calculation)
+For electronic calculations, a `forc_conv_thr` of about 1e-4 Ry/A is commonly found in the literature. Lower values such as 1e-7 Ry/A [may be necessary](https://ashour.dev/Practical+DFT/Iterative+Convergence+Criteria+in+DFT+-+VASP+and+Quantum+ESPRESSO#Force+Convergence+(%60forc_conv_thr%60%2F%60EDIFFG%60%3C0)) for phonon calculations, which is rarely attainable with the usual BFGS algorithm. [Special algorithms](https://iopscience.iop.org/article/10.1088/1361-648X/aacd79) have been developed for such situations.
+[As a rule of thumb](https://mattermodeling.stackexchange.com/questions/13046/negative-phonon-calculation) the forces convergence is roughly the square root of the energy convergence, eg. if energy is converged to 1e-6, forces are converged to 1e-3.
+The reasonable approach to calculate the phonons and forces is to use a more relaxed force threshold for the relaxation, and then apply the actual force thresholds in the [Phonopy](https://phonopy.github.io/phonopy/) SCF calculations.
 
-The convergence criteria for the maximum displacement is specified in [CASTEP](CASTEP.md) as the `geom_disp_tol`. In QE, the equivalent seems to be `trust_radius_min`. [(source)](https://lists.quantum-espresso.org/pipermail/users/2020-November/046323.html)
+The convergence criteria for the maximum displacement is specified in [CASTEP](CASTEP.md) as the `geom_disp_tol`. In QE, the equivalent [seems to be](https://lists.quantum-espresso.org/pipermail/users/2020-November/046323.html) `trust_radius_min`.
 
 The pressure convergence by default is usually okay, but [we might want to reduce](https://ashour.dev/Practical+DFT/Iterative+Convergence+Criteria+in+DFT+-+VASP+and+Quantum+ESPRESSO#Stress%2Fpressure+convergence+(%60press_conv_thr%60%2F%60EDIFFG%3C0%60)) `press_conv_thr` for phonon studies.
 
@@ -98,9 +98,9 @@ For example, to study perovskites, #druzbicki2024 used NC pseudos, automatically
 PAW pseudos are better than US for perovskites, according to a [vasp workshop](https://www.vasp.at/vasp-workshop/pseudoppdatabase.pdf).  
 
 Quantum ESPRESSO uses pseudos in UPF format, and can be obtained from:
-- [Pseudo-Dojo](http://www.pseudo-dojo.org/)
-- [Pslibrary](https://dalcorso.github.io/pslibrary/) Need to compile it myself.
-- [Standard Solid State PPs (SSSP)](https://www.materialscloud.org/discover/sssp/table/efficiency) "Best verified PPs"
+- [Pseudo-Dojo](http://www.pseudo-dojo.org/) Easy to use
+- [Pslibrary](https://dalcorso.github.io/pslibrary/) Must compile them yourself...
+- [Standard Solid State PPs (SSSP)](https://www.materialscloud.org/discover/sssp/table/efficiency) Best verified PPs, but lack some such as PBEsol
 - [Quantum ESPRESSO pseudos](http://pseudopotentials.quantum-espresso.org/)
 - [Other PPs resources](https://www.quantum-espresso.org/other-resources/)
 

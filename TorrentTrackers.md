@@ -1,6 +1,6 @@
 # Torrent trackers
 
-Sometimes we need to share a big file, such as a large calculation. Uploading it to a cloud server can be very slow, the connection can be lost, the files can be corrupted, etc. In these cases, we may want to share our files by using a torrent download. This way, file sharing can be stopped and restarted without compromising the integrity of our data.  
+Sometimes we need to share a big file, such as a large calculation. Uploading it to a cloud server can be very slow, the connection can be lost, the files can be corrupted, etc. In these cases, the ideal solution for Linux systems is [RSync](https://www.tecmint.com/rsync-local-remote-file-synchronization-commands/). An alternative option is to share our files by using a torrent download. This way, file sharing can be stopped and restarted without compromising the integrity of our data.  
 
 Torrent trackers help people find each other. They don't store the files themselves, but they tell us who has them. When we create a new torrent, we just need to add the URL of some trackers to make sure our file is indexed properly.  
 

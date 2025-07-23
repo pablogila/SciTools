@@ -21,6 +21,7 @@ dict_files = {
     '/home/pablo/Documents/obsidian/Work ⚛️/Instruments/TorrentTrackers.md' : 'TorrentTrackers.md',
     '/home/pablo/Documents/obsidian/Work ⚛️/Instruments/Git.md'             : 'Git.md',
     '/home/pablo/Documents/obsidian/Work ⚛️/Instruments/McStas.md'          : 'McStas.md',
+    '/home/pablo/Documents/obsidian/Work ⚛️/Instruments/CrysAlisPro.md'     : 'CrysAlisPro.md',
 }
 
 # Dict to fix Obsidian wikilinks
@@ -48,6 +49,7 @@ dict_fix = {
     '[[McStas]]'                    : '[McStas](McStas.md)',
     '[[Vitess]]'                    : '[Vitess](https://vitess.fz-juelich.de/)',
     '[[PHITS]]'                     : '[PHITS](https://phits.jaea.go.jp/)',
+    '[[CrysAlisPro]]'               : '[CrysAlisPro](CrysAlisPro.md)',
     '[[Naming conventions#For calculations|naming convention]]' : 'naming convention',
     ' ([[Meet 25-03-07-09.00 McStasScript]])' : '',
 }
