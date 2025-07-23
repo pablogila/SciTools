@@ -53,7 +53,7 @@ We should also `Refine instrument model`.
 
 ### Preliminary lattice parameters
 
-We can also determine the lattice parameters from the [[#Ewald explorer]], which is more visual and has additional tools to fit to a high-symmetry unit cell. Skip to that section if you want to do it there.
+We can also determine the lattice parameters from the Ewald explorer, which is more visual and has additional tools to fit to a high-symmetry unit cell. Skip to that section if you want to do it there.
 
 We can determine the lattice parameters directly from the Lattice wizard. First, click on `Unit cell finding with options`. Hopefully you don't have to deal with twinning samples with more than one crystal, but if you do you can specify it here. After running it, you should see the preliminary parameters in the left side of the window, under the line *Constrained current cell*. Check that these are close to the expected ones.
 These parameters can be refined by setting a tolerance of indexation of ~0.05 under the `Reindexation with current cell, Change tolerance of indexation` setting, and then clicking several times the `Reindexation with current cell` until they converge. The smaller the threshold, the less points will remain.
@@ -110,15 +110,17 @@ On step 6, change the output name so that it does not overwrite the previous aut
 Go with the default options for the rest of the sections. Since we set the finalization options to *manual*, it will popup a window to apply some options:
 In the *Centering* tabs, make sure that the column with the lowest values is selected.
 In the *Space group* tab, try to select the group with the highest symmetry, but also with a low *R(int)* value.
-In the *INS-File* tab, check that the chemical formula is right. The program might have changed the Z value, but it might have a reason to do so. We can go with the default Z value, since it should be possible to change it later from [[Olex2]] anyway.
+In the *INS-File* tab, check that the chemical formula is right. The program might have changed the Z value. It might have a reason to do so, so if you are not sure you can go with the default Z value, since it should be possible to change it later from [[Olex2]] anyway.
 
 ## Refinalize
 
+If the data is not good enough, we might have to refinalize the analysis.
+
 Click on the third button from the top left corner to inspect the data.
-
 On the `Red graphs` tab, set `Source data` to `absscale` and check that all values are close to 1 for all frames. If the variation is too high, it indicates that the sample was not in focus.
+We should also check the *R(int)* values. Set `Source data` to `rint` to check the *R(int)* value. High values (greater than ~30) indicate poor data quality for those frames.
 
-We should also check the *R(int)* values. Set `Source data` to `rint` to check the *R(int)* value. High values indicate poor data quality for those frames.
+If we suspect the data is not good enough, we should refinalize it.
 To ignore high *R(int)* frames, click on `Refinalize`. On `Space group and AutoChem`, select `Interactive`. On `Filters and limits` select `Manual`, and click on `Filters, Add` and choose the `'rint-frame'` filter. There you can filter frames over e.g. 40 *R(int)*.
 We can also change the output filename.
 Click Ok and go through the refinement.
