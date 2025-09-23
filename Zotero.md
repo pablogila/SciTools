@@ -21,6 +21,7 @@ Some of these addons require a small configuration to work flawlessly, which is 
 ## Automatic and custom citation keys
 
 You can edit the automatic citation keys by going to `Settings, Better BibTex, Citation keys`. There you can modify the citation key formula, for example as `auth.lower + year` to have automatic citation keys such as _druzbicki2023_.  
+A more advanced option to remove accents and hyphens (`-`) between surnames: `auth.transliterate.lower.replace(/-/g,'') + year`  
 
 You can also create a custom citation key for any particular reference, by editing the `Extra` section of said reference with `citation key: MyCustomKey`.  
 
@@ -40,7 +41,7 @@ If you are using a Zotero version < 7, you can still use ZotMoov, or ZotFile ins
 
 ## Supporting Information PDFs
 
-It is recommended to save the Supporting Information (SI) of the papers by creating a copy of the corresponding reference (with a right click), adding `_Supplementary` at the end of the title, then attaching the supplementary pdf, and finally editing the citation key as `CitationKey_SI`. This prevents SI to be renamed incorrectly, since __ZotFile and ZotMoov only seem to work fine with one attachment per reference__.  
+It is recommended to save the Supporting Information (SI) of the papers by creating a copy of the corresponding reference (with a right click), adding ` - Supporting Information` at the end of the title, then attaching the supplementary pdf, and finally editing the citation key as `CitationKey_SI`. This prevents SI to be renamed incorrectly, since __ZotFile and ZotMoov only seem to work fine with one attachment per reference__.  
 
 ## Appendix
 

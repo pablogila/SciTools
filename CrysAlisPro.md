@@ -1,8 +1,8 @@
 # CrysAlisPro
 
-CrysAlisPro can be used to analyse single crystal x-ray diffraction measurements.
-It can also estimate the powder diffractogram from the single crystal data.
-This software is free of charge. We get access to CrysAlisPro after registration at the [Rigaku X-Ray forum](https://www.rigakuxrayforum.com/).
+CrysAlisPro is a software to analyse single crystal x-ray diffraction measurements, obtaining the lattice parameters and the symmetry of your sample. It outputs the `*.ins` and `*.hkl` files used by [[Olex2]] or Jana to determine the crystal structure.
+Among other things, it can also estimate the powder diffractogram from the single crystal data, and create unwarp images of the experiment.
+It is free of charge, and can be accessed after registration at the [Rigaku X-Ray forum](https://www.rigakuxrayforum.com/).
 
 ## Importing data
 
@@ -121,7 +121,14 @@ On the `Red graphs` tab, set `Source data` to `absscale` and check that all valu
 We should also check the *R(int)* values. Set `Source data` to `rint` to check the *R(int)* value. High values (greater than ~30) indicate poor data quality for those frames.
 
 If we suspect the data is not good enough, we should refinalize it.
-To ignore high *R(int)* frames, click on `Refinalize`. On `Space group and AutoChem`, select `Interactive`. On `Filters and limits` select `Manual`, and click on `Filters, Add` and choose the `'rint-frame'` filter. There you can filter frames over e.g. 40 *R(int)*.
+To ignore high *R(int)* frames, click on `Refinalize`. On `Space group and AutoChem`, select `Interactive`. On `Filters and limits` select `Manual`, and click on `Filters`, `Add` and choose the `'rint-frame'` filter. There you can filter frames over e.g. 40 *R(int)*.
 We can also change the output filename.
 Click Ok and go through the refinement.
+
+## Outputs
+Main outputs
+- `*.res`
+- `*.ins`
+- `*.hkl`
+- `*.cif_od` Oxford Diffraction, for [[Jana]]
 
