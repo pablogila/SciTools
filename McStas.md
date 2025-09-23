@@ -2,11 +2,11 @@
 
 ## Overview
 
-[McStas (web)](https://www.mcstas.org/), [(Manual)](https://www.mcstas.org/documentation/manual/) is a general tool for **simulating neutron scattering instruments**. It is based on a compiler that reads a high-level specification language defining the instrument to be simulated and produces C code that performs the Monte Carlo Simulation. This makes it very fast, typical figures are 500000 neutron histories per second on a fast PC.
-
-It is common to test calculations in more than one software to check their validity; an alternative to McStas is [Vitess](https://vitess.fz-juelich.de/).
+[McStas (web)](https://www.mcstas.org/), [(Manual)](https://www.mcstas.org/documentation/manual/) is a general tool for **simulating neutron scattering instruments**. It compiles a high-level specification language defining the instrument and produces C code that performs the Monte Carlo Simulation. This makes it very fast, typical figures are 500000 neutron histories per second on a fast PC.
 
 McStas shares codebase with its X-Ray analogous, [McXtrace](https://www.mcxtrace.org/), with a similar syntax.
+
+It is common to test calculations in more than one software to check their validity; an alternative to McStas is [Vitess](https://vitess.fz-juelich.de/).
 
 ## Installation
 
@@ -38,14 +38,21 @@ module load Python
 conda activate /scratch/gila/.conda/envs/mcstas
 ```
 
-## Components and resources
+## Tutorials
+
+As a personal recommendation of hands-on tutorials, in this specific order:
+1. [ESS DMSC Summer School](https://ess-dmsc-dram.github.io/dmsc-school/intro.html). This is the go-to tutorial for the ESS workflow, from McStas calculations to data analysis with Scipp
+2. [McStas and McXtrace schools](https://github.com/McStasMcXtrace/Schools). Repository with learning materials and exercises from previous schools
+3. [McStasScript-notebooks](https://github.com/PaNOSC-ViNYL/McStasScript-notebooks). Tutorial with McStasScript quizzes
+4. [Neutron scattering and McStas learning exercises](https://e-learning.pan-training.eu/wiki/Main_Page). Following Kim Leffman's notes
+
+## Components
 
 McStas comes with a comprehensive library of well-tested components that include most standard elements of neutron scattering instruments. New components are constantly created by the community. Neutron sources can also be imported from other programs.
-- [McStas components documentation](https://www2.mcstas.org/download/components/)
-- [McStas Manual](https://www.mcstas.org/documentation/manual/) has a components manual
-- [Shared useful files for McStas](https://www.mcstas.org/download/share/) used to simulate ISIS or ESS instruments
-- [MCPL](https://mctools.github.io/mcpl/) file format to transfer data between different Monte Carlo applications, for example to use sources from [PHITS](https://phits.jaea.go.jp/) calculations.
-- [McStasToX](https://github.com/mccode-dev/McStasToX/). Package to read McStas data and export to other software, such as [[Scipp]]
+- [McStas components documentation](https://www.mcstas.org/download/components/) list of all the available components
+- [McStas Manual](https://www.mcstas.org/documentation/manual/)
+- [McStas Script documentation](https://mads-bertelsen.github.io/) for using the Python API
+- [Shared useful files for McStas](https://www.mcstas.org/download/share/) including the ISIS moderator
 
 ## McStasScript
 
@@ -99,9 +106,20 @@ plt.plot(wavelength, intensity)
 plt.show()
 ```
 
-## Export to NeXus files
+## Importing data
 
-In the future, there will be tools to import McStas data to [[Scipp]], such as [McStasToX](https://github.com/mccode-dev/McStasToX/). We can, however, export the results to a [NeXus](https://manual.nexusformat.org/introduction.html) [HDF5](https://en.wikipedia.org/wiki/Hierarchical_Data_Format) file, which is compatible with both [[Mantid]] and Scipp. To do so, some additional considerations are required:
+[MCPL](https://mctools.github.io/mcpl/) is the file format used to transfer data between Monte Carlo programs.
+This includes neutron sources created with softwares such as [PHITS](https://phits.jaea.go.jp/).
+
+## Exporting data
+
+There are tools under heavy development to import McStas data to [[Scipp]], such as [McStasToX](https://github.com/mccode-dev/McStasToX/). This will presumably be the standard at ESS.
+
+In the meantime, McStas calculations can be exported to a [NeXus](https://manual.nexusformat.org/introduction.html) [HDF5](https://en.wikipedia.org/wiki/Hierarchical_Data_Format) file, which is compatible with both [[Mantid]] and [[Scipp]].
+Note that to date the official [McStas and Mantid integration wiki](https://github.com/mccode-dev/McCode/wiki/McStas-and-Mantid) is still under construction.
+The following notes come from the conversations with the developers at ESS and DTU, mostly Peter Willendrup and Mads Bertelsen.
+
+To export NeXus files to Mantid, some additional considerations are required:
 - Run the simulation with the `NeXus=True` flag, and `custom_flags='--IDF'`
 - The instrument name should follow `*_Mantid`
 - Include the dependency `" @NEXUSFLAGS@ "`
@@ -145,7 +163,7 @@ monitor.set_parameters(
 # Set parameters for the source and sample etc...
 ```
 
-When using a banana monitor, the xwidth will be the diameter of the full banana. Therefore, a banana monitor should be placed centered at the sample position, with the xwidth being double the distance from the centered sample to the surface of the monitor. The angle is specified with the theta variable.
+When using a banana monitor, `xwidth` will be the diameter of the full banana. Therefore, a banana monitor should be placed centered at the sample position, with the `xwidth` being double the distance from the centered sample to the surface of the monitor. The angle is specified with the `theta` variable.
 ```python
 monitor.set_parameters(
 	options ='"mantid banana, theta limits=[-15 15] bins=100, y bins=100, neutron pixel min=0 t, list all neutrons"',
@@ -156,6 +174,21 @@ monitor.set_parameters(
 monitor.set_AT([0,0,0], RELATIVE=arm)
 ```
 
+Following this example, the resulting `*.h5` files can then be imported and analysed in [[Mantid]]:
+```python
+from mantid.simpleapi import *
+
+# Convert the McStas event data to a new workspace with a diffraction pattern
+def NPD_reduction(InputWS, rebin_params='0.5,0.001,3'):
+	OutputWS = InputWS + '_reduced'
+	OutputWS = ConvertUnits(InputWorkspace=InputWS, OutputWorkspace=OutputWS, Target='dSpacing')
+	OutputWS = Rebin(InputWorkspace=OutputWS, OutputWorkspace=OutputWS, Params=rebin_params)
+	OutputWS = SumSpectra(InputWorkspace=OutputWS, OutputWorkspace=OutputWS)
+return OutputWS
+
+NPD_reduction('mccode', '0.5,0.005,2')
+```
+
 ## Beware of the binning
 
 Since we mostly measure **histograms** of neutron counts per wavelength or energy range, the binning will be very important to properly normalise the data. This implies not only the number of bins, but also the range of wavelengths or energies that we are measuring.
@@ -164,17 +197,4 @@ A proper normalisation of the intensities is performed by dividing the intensity
 measurement = ms.name_search("L_monitor", data)
 I = measurement.Intensity * binning / (Lmax-Lmin) / (xw*100 * yh*100) / 100
 ```
-
-==THE FOLLOWING IS NOT ACCURATE:==
-If we normalise the intensity from a neutron *energy* measurement (E_monitor) by the size of the energy bin, the intensity will be in units of energy. On the other side, If we normalise the intensity of a *wavelength* measurement (L_monitor) by the size of the wavelength bin, and *then* we convert the x axis to energy, it will be in *lethargy* units. Remember the De Broglie conversion from neutron wavelength to energy,
-$$E = \frac{h}{2m\lambda^2}$$
-$$E[meV] = \frac{81.82}{(\lambda[AA])^2}$$
-$$\lambda[AA] = \sqrt{\frac{81.82}{E[meV]}}$$
-
-## Tutorials
-- [ESS DMSC Summer School](https://ess-dmsc-dram.github.io/dmsc-school/intro.html). Great tutorial with the ESS workflow, from McStas calculations to data analysis with Scipp
-- [McStas and McXtrace schools](https://github.com/McStasMcXtrace/Schools). Repo with learning material from past schools
-- [McStasScript-notebooks](https://github.com/PaNOSC-ViNYL/McStasScript-notebooks). Tutorial with McStasScript quizzes
-- [Neutron scattering and McStas learning exercises](https://e-learning.pan-training.eu/wiki/Main_Page). Following Kim Leffman's notes
-- [McStas and Mantid integration](https://github.com/mccode-dev/McCode/wiki/McStas-and-Mantid) GitHub Wiki
 
