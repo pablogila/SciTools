@@ -113,9 +113,9 @@ This includes neutron sources created with softwares such as [PHITS](https://phi
 
 ## Exporting data
 
-There are tools under heavy development to import McStas data to [[Scipp]], such as [McStasToX](https://github.com/mccode-dev/McStasToX/). This will presumably be the standard at ESS.
+There are tools under heavy development to import McStas data to [Scipp](https://scipp.github.io/), such as [McStasToX](https://github.com/mccode-dev/McStasToX/). This will presumably be the standard at ESS.
 
-In the meantime, McStas calculations can be exported to a [NeXus](https://manual.nexusformat.org/introduction.html) [HDF5](https://en.wikipedia.org/wiki/Hierarchical_Data_Format) file, which is compatible with both [[Mantid]] and [[Scipp]].
+In the meantime, McStas calculations can be exported to a [NeXus](https://manual.nexusformat.org/introduction.html) [HDF5](https://en.wikipedia.org/wiki/Hierarchical_Data_Format) file, which is compatible with both [Mantid](https://www.mantidproject.org/) and [Scipp](https://scipp.github.io/).
 Note that to date the official [McStas and Mantid integration wiki](https://github.com/mccode-dev/McCode/wiki/McStas-and-Mantid) is still under construction.
 The following notes come from the conversations with the developers at ESS and DTU, mostly Peter Willendrup and Mads Bertelsen.
 
@@ -128,7 +128,7 @@ To export NeXus files to Mantid, some additional considerations are required:
 - Event monitors Monitor_nD must be named `nD_Mantid_#`
 - The Monitor_nD options for a square 16x16 monitor should be similar to `"mantid square x limits=[-0.08 0.08] bins=100 y limits=[-0.08 0.08] bins=100, neutron pixel min=0 t, list all neutrons"`. Note that since Mantid requires pixels to have an unique ID, a second monitor should have a higher `min` value (>bins²) to avoid overlapping IDs.
 
-An example to export a very simple diffractometer to [[Mantid]]:
+An example to export a very simple diffractometer to [Mantid](https://www.mantidproject.org/):
 ```python
 # Definitions of custom distances and sizes, in meters
 dist_src_sam = 4
@@ -174,7 +174,7 @@ monitor.set_parameters(
 monitor.set_AT([0,0,0], RELATIVE=arm)
 ```
 
-Following this example, the resulting `*.h5` files can then be imported and analysed in [[Mantid]]:
+Following this example, the resulting `*.h5` files can then be imported and analysed in [Mantid](https://www.mantidproject.org/):
 ```python
 from mantid.simpleapi import *
 

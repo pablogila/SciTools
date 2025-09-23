@@ -51,6 +51,8 @@ dict_fix = {
     '[[PHITS]]'                     : '[PHITS](https://phits.jaea.go.jp/)',
     '[[CrysAlisPro]]'               : '[CrysAlisPro](CrysAlisPro.md)',
     '[[#Ewald explorer]]'           : 'Ewald explorer',
+    '[[Mantid]]'                    : '[Mantid](https://www.mantidproject.org/)',
+    '[[Scipp]]'                     : '[Scipp](https://scipp.github.io/)',
     '[[Naming conventions#For calculations|naming convention]]' : 'naming convention',
     ' ([[Meet 25-03-07-09.00 McStasScript]])' : '',
 }
