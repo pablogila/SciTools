@@ -45,6 +45,7 @@ As a personal recommendation of hands-on tutorials, in this specific order:
 2. [McStas and McXtrace schools](https://github.com/McStasMcXtrace/Schools). Repository with learning materials and exercises from previous schools
 3. [McStasScript-notebooks](https://github.com/PaNOSC-ViNYL/McStasScript-notebooks). Tutorial with McStasScript quizzes
 4. [Neutron scattering and McStas learning exercises](https://e-learning.pan-training.eu/wiki/Main_Page). Following Kim Leffman's notes
+5. [NCrystal Notebooks](https://github.com/mctools/ncrystal-notebooks?tab=readme-ov-file#ncrystal-notebooks). Integration with NCrystal to use samples from [QuantumESPRESSO](QuantumESPRESSO.md) outputs.
 
 ## Components
 
