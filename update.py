@@ -53,6 +53,8 @@ dict_fix = {
     '[[#Ewald explorer]]'           : 'Ewald explorer',
     '[[Mantid]]'                    : '[Mantid](https://www.mantidproject.org/)',
     '[[Scipp]]'                     : '[Scipp](https://scipp.github.io/)',
+    '[[Jana]]'                      : '[Jana](https://jana.fzu.cz/)',
+    '[[Olex2]]'                     : '[Olex2](https://www.olexsys.org/olex2/)',
     '[[Naming conventions#For calculations|naming convention]]' : 'naming convention',
     ' ([[Meet 25-03-07-09.00 McStasScript]])' : '',
 }

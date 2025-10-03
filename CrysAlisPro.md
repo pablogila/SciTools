@@ -1,6 +1,6 @@
 # CrysAlisPro
 
-CrysAlisPro is a software to analyse single crystal x-ray diffraction measurements, obtaining the lattice parameters and the symmetry of your sample. It outputs the `*.ins` and `*.hkl` files used by [[Olex2]] or Jana to determine the crystal structure.
+CrysAlisPro is a software to analyse single crystal x-ray diffraction measurements, obtaining the lattice parameters and the symmetry of your sample. It outputs the `*.ins` and `*.hkl` files used by [Olex2](https://www.olexsys.org/olex2/) or Jana to determine the crystal structure.
 Among other things, it can also estimate the powder diffractogram from the single crystal data, and create unwarp images of the experiment.
 It is free of charge, and can be accessed after registration at the [Rigaku X-Ray forum](https://www.rigakuxrayforum.com/).
 
@@ -77,7 +77,7 @@ Once the wrong points are hidden, go to the `Crystal` tab on the right, and clic
 Here we first select `Auto unit cell finding in shown peaks`.
 Next, on the same tab, run `Lattice improvement with tolerance`, with a value of ~0.05. Run this again several times until the lattice parameters are not changing anymore.
 
-After this, we can also fit the data to a highly-symmetric unit cell by going to `LATTICE, Modify lattice type`, and selecting the option with the highest symmetry.
+After this, we can also fit the data to a highly-symmetric unit cell by going to `LATTICE, Modify lattice type`, and selecting the option with the [most meaningful](https://rigaku.com/products/crystallography/learning/cap-tip007) G6-projection distance.
 
 If we created some twins by mistake, we can also remove them from the Ewald explorer. Go to `Crystal, Component #X, Clear twin component`, and repeat for the rest of the twins.
 
@@ -110,7 +110,7 @@ On step 6, change the output name so that it does not overwrite the previous aut
 Go with the default options for the rest of the sections. Since we set the finalization options to *manual*, it will popup a window to apply some options:
 In the *Centering* tabs, make sure that the column with the lowest values is selected.
 In the *Space group* tab, try to select the group with the highest symmetry, but also with a low *R(int)* value.
-In the *INS-File* tab, check that the chemical formula is right. The program might have changed the Z value. It might have a reason to do so, so if you are not sure you can go with the default Z value, since it should be possible to change it later from [[Olex2]] anyway.
+In the *INS-File* tab, check that the chemical formula is right. The program might have changed the Z value. It might have a reason to do so, so if you are not sure you can go with the default Z value, since it should be possible to change it later from [Olex2](https://www.olexsys.org/olex2/) anyway.
 
 ## Refinalize
 
@@ -130,5 +130,5 @@ Main outputs
 - `*.res`
 - `*.ins`
 - `*.hkl`
-- `*.cif_od` Oxford Diffraction, for [[Jana]]
+- `*.cif_od` Oxford Diffraction, for [Jana](https://jana.fzu.cz/)
 

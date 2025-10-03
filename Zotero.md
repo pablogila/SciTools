@@ -43,6 +43,14 @@ If you are using a Zotero version < 7, you can still use ZotMoov, or ZotFile ins
 
 It is recommended to save the Supporting Information (SI) of the papers by creating a copy of the corresponding reference (with a right click), adding ` - Supporting Information` at the end of the title, then attaching the supplementary pdf, and finally editing the citation key as `CitationKey_SI`. This prevents SI to be renamed incorrectly, since __ZotFile and ZotMoov only seem to work fine with one attachment per reference__.  
 
+## Tags
+
+You may be tempted to create a new collection for each topic. Although you can include the same paper in two or more collections, it might be more interesting to use tags instead. You can have a single collection of all your papers and use tags to filter them. It is highly recommended that you think ahead about which keywords are relevant to your work and then tag your papers accordingly. Using multiple tags allows you to efficiently filter large collections. So, please use tags!  
+
+## Groups
+
+You work with other people and share your references by [creating a group](https://www.zotero.org/groups/new/)  
+
 ## Appendix
 
 ### Renaming titles with subindexes via ZotFile
