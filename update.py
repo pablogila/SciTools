@@ -57,6 +57,7 @@ dict_fix = {
     '[[Olex2]]'                     : '[Olex2](https://www.olexsys.org/olex2/)',
     '[[Naming conventions#For calculations|naming convention]]' : 'naming convention',
     ' ([[Meet 25-03-07-09.00 McStasScript]])' : '',
+    '[[DFT#Convergence testing|convergence testing on DFT]]' : 'convergence testing on DFT',
 }
 
 # Copy and correct Obsidian notes

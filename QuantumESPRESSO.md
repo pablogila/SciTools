@@ -2,6 +2,23 @@
 
 [Quantum ESPRESSO (web)](https://www.quantum-espresso.org/) is an integrated suite of Open-Source computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on [DFT](https://en.wikipedia.org/wiki/Density_functional_theory), [Molecular Dynamics](https://en.wikipedia.org/wiki/Molecular_dynamics), plane waves, and pseudopotentials. It is usually preinstalled in superclusters like [Hyperion](https://scc.dipc.org/docs/).
 
+## Local installation
+
+ You will most probably want to run your calculations on a cluster, such as [Hyperion](https://scc.dipc.org/docs/) or [SCARF](https://www.scarf.rl.ac.uk/index.html). However, you can also run Quantum ESPRESSO locally for small systems.
+ You can install it through [apt](https://pranabdas.github.io/espresso/setup/install), but these binaries might be outdated. The easiest way to install it is to download the [.deb compiled binaries from pranabdas](https://github.com/pranabdas/espresso/releases).
+
+## Abort and restart calculations
+
+You can  modify certain parameters while the program is running, e.g., you want to change the `mixing_beta` value because SCF accuracy is oscillation without any sign of convergence. To do so, create an empty file named `{prefix}.EXIT` in the directory with your input file or in the `outdir` as set in the `&CONTROL` card of input file:
+```
+touch {prefix}.EXIT
+```
+
+That will stop the program on the next iteration, and save the state. In order to restart, set the `restart_mode` in `&CONTROL` card to `'restart'` and re-run after necessary changes. You must re-submit the job with the same number of processors.
+```
+&CONTROL  ...  restart_mode = 'restart'  .../
+```
+
 ## Input description
 
 These are general indications for the creation of QE inputs. The full list of input parameters is in the [Quantum ESPRESSO input data description](https://www.quantum-espresso.org/documentation/input-data-description/). Inputs can also be created with a graphical interface with [PWgui](http://www-k3.ijs.si/kokalj/pwgui/). Once we know what we are doing this may not be necessary, but until then PWgui is really useful to know what parameters to introduce and so on.
@@ -26,6 +43,8 @@ In general, it is good practice to write exponentials with double precision, wit
 
 To export to a .CIF file after the calculation, we can use [ASE](ASE.md). The graphical option would be to open the output on XCrySDen and save it as `.xsf`, then open it on [VESTA](https://jp-minerals.org/vesta/en/) and save it as `.cif`. This last option seems to preserve a bit better the numerical precision, since both [ASE](ASE.md) and [VESTA](https://jp-minerals.org/vesta/en/) cut some decimals for some weird reason. But this can be solved by copying those positions by hand in the final CIF file.
 
+The lattice parameter "alat" should only be set once. It can be set to `celldm(i)` (a.u.), or `A` (Angstrom), or from the `CELL_PARAMETERS`.
+
 ## Crystal structure
 
 In Quantum Espresso, the structure information is provided by `ibrav` number, and corresponding `celldm` values or lattice constants and cosines of angle between the axes. There are only [14 Bravais lattices](https://en.wikipedia.org/wiki/Bravais_lattice#In_3_dimensions), check the [ibrav parameters for QE](https://pranabdas.github.io/espresso/setup/crystal-structure).
@@ -36,9 +55,11 @@ cif2cell CsPbI3.cif -p quantum-espresso -o relax.in
 ```
 
 To fix the bravais lattice, we must specify the corresponding ibrav number, providing the proper lattice parameters, and adding `cell_dofree='ibrav'`. For example, to fix the lattice at 90º angles, we might want a simple orthorhombic cell, so we set `ibrav=8` and specify A, B and C.
-The tag `cell_dofree` specifies which cell parameters should be relaxed, fixing the rest of the cell. Check the [documentation](https://www.quantum-espresso.org/Doc/INPUT_PW.html#idm1160) to see the full list of options.
+The tag `cell_dofree` specifies which cell parameters should be relaxed, fixing the rest of the cell. Another scenario might be to relax the cell while keeping the angles fixed; this can be achieved with `cell_dofree='volume'`. However, this only works for cubic cells with `ibrav=1` for a `calculation=vc-relax`. Check the [documentation](https://www.quantum-espresso.org/Doc/INPUT_PW.html#idm1160) to see the full list of options.
 
-## Convergence study
+## Convergence testing
+
+Some tips to do convergence testing on DFT using QE.
 
 For phonons, we will probably need an SCF convergence of `conv_thr=1.0d-10` [or even smaller](https://ashour.dev/Practical+DFT/Iterative+Convergence+Criteria+in+DFT+-+VASP+and+Quantum+ESPRESSO#SCF+convergence+(%60conv_thr%60%2F%60EDIFF%60)).
 
@@ -190,7 +211,11 @@ dE0s is positive which should never happen
 ```
 
 This kind of errors invariably happens when you are very close to the minimum and you have some numerical noise on forces. For most cases, the system is sufficiently  
-relaxed.
+relaxed, and a final SCF calculation to get reasonable energies should be enough.
 
 We can try to run the calculation again. If it persists, slightly modify some atoms randomly and run again. [(source)](https://pw-forum.pwscf.narkive.com/r5X3gkdU/error-in-routine-bfgs-1-de0s-is-positive-which-should-never-happen). You can also try running the calculation from the last positions [(source)](https://pw-forum.pwscf.narkive.com/r5X3gkdU/error-in-routine-bfgs-1-de0s-is-positive-which-should-never-happen).
+
+Another option is to decrease `conv_thr` to a stricter value, e.g., from 1.0d−8 to 1.0d−9 or 1.0d−10 Ry. A stricter SCF convergence can produce cleaner forces and prevent the erratic BFGS step.
+
+We can also increase ecutwfc and ecutrho if they were not fully converged. Higher cutoffs reduce discretization error, which can also reduce force noise.
 

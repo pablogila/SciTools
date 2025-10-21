@@ -94,6 +94,7 @@ dc unwarp
 ```
 
 Click on `Next` until you can choose `Generate layers`, and write the numbers `3  0.8` on the layers generator. The `3` specifies the number of planes that you want to calculate. With these setting we would obtain 21 images, which is already pretty decent.
+To only produce the first 3 images, you can just set `0  0.8`.
 
 ## Profile integration
 
@@ -105,7 +106,7 @@ dc proffit
 
 On step 3, click on `Edit special pars`, and type `alt+E` to show the hidden parameters, check `Skip model refinement`.
 
-On step 6, change the output name so that it does not overwrite the previous automatic analysis. Also, under *Finalization options*, set the *Space group determination* to `manual`, and click on `Edit formula` to introduce the expected chemical elements. Here you should also introduce the expected formula unit `Z` value, this is, the number of molecules in the unit cell.
+On step 6, change the output name so that it does not overwrite the previous automatic analysis. Also, click on `Edit formula` to introduce the expected chemical elements. Here you should also introduce the expected formula unit `Z` value, this is, the number of molecules in the unit cell. Finally, under *Finalization options*, set the *Space group determination* to `manual`.
 
 Go with the default options for the rest of the sections. Since we set the finalization options to *manual*, it will popup a window to apply some options:
 In the *Centering* tabs, make sure that the column with the lowest values is selected.
